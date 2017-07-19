@@ -28,7 +28,7 @@
     var_dump($result);
 
     echo "result decode "."<br>";
-    $result_decode = (array)json_encode($result);
+    $result_decode = (array)json_decode($result);
     var_dump($result_decode);
     
 //     $name = $result_decode->displayName;
