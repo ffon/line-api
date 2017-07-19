@@ -52,7 +52,7 @@ curl_close ($ch);
     
     var_dump($result);
  
-?>
+
             
     
     ?>
