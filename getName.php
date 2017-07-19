@@ -1,6 +1,6 @@
 <?php
-    $proxy = 'http://fixie:aChVS27TDH6KbKG@velodrome.usefixie.com:80';
-    $proxyauth = 'http://fixie:aChVS27TDH6KbKG@velodrome.usefixie.com:80';
+//     $proxy = 'http://fixie:aChVS27TDH6KbKG@velodrome.usefixie.com:80';
+//     $proxyauth = 'http://fixie:aChVS27TDH6KbKG@velodrome.usefixie.com:80';
 
     $strAccessToken = "3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=";
     
@@ -19,8 +19,8 @@
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER,$header);
-    curl_setopt($ch, CURLOPT_PROXY, $proxy);
-    curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+//     curl_setopt($ch, CURLOPT_PROXY, $proxy);
+//     curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
