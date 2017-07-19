@@ -1,3 +1,5 @@
+<html>
+    <meta charset="utf-8">
 <?php
 getMid();
 function getMid()
@@ -90,3 +92,5 @@ function insert_data_tb($mid)
     $err    = curl_error($chAdd);
     curl_close($chAdd);
 }
+    ?>
+</html>
