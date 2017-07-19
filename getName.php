@@ -24,12 +24,15 @@
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
-    var_dump($result)."<br>";
+    echo "result"."<br>";
+    var_dump($result);
+
+    echo "result decode "."<br>";
     $result_decode = json_decode($result);
     var_dump($result_decode);
     
-    $name = $result_decode->displayName;
-    var_dump($name);
-    echo "<br>".$result_decode->userId;
-    echo "<br>".$result_decode->pictureUrl;
-    echo "<br>".$result_decode->statusMessage; 
+//     $name = $result_decode->displayName;
+//     var_dump($name);
+//     echo "<br>".$result_decode->userId;
+//     echo "<br>".$result_decode->pictureUrl;
+//     echo "<br>".$result_decode->statusMessage; 
