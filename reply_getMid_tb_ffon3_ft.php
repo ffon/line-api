@@ -69,19 +69,19 @@ function getName($mid)
    insert_data_tb($result);
 }
 
-function insert_data_tb($mid)
+function insert_data_tb($data)
 {
-    var_dump($mid);
+//     var_dump($mid);
     
-    $de_mid = json_decode($mid);
-    $name = $de_mid->displayName;
-    $user_id= $de_mid->userId;
-    $image=$de_mid->pictureUrl;
-    $sta=$de_mid->statusMessage;
+//     $de_mid = json_decode($mid);
+//     $name = $de_mid->displayName;
+//     $user_id= $de_mid->userId;
+//     $image=$de_mid->pictureUrl;
+//     $sta=$de_mid->statusMessage;
 
 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name=testEmoji'.'&image=testEmoji'.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?data='.$data.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
