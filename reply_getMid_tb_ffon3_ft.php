@@ -70,22 +70,23 @@ function getName($mid)
 function insert_data_tb($mid)
 {
     var_dump($mid);
-    // $de_mid = json_decode($mid);
-    // $name = $de_mid->displayName;
-    // //$mid= $de_mid->userId;
-    // $image=$de_mid->pictureUrl;
-    // $sta=$de_mid->statusMessage;
+    
+    $de_mid = json_decode($mid);
+    $name = $de_mid->displayName;
+    //$mid= $de_mid->userId;
+    $image=$de_mid->pictureUrl;
+    $sta=$de_mid->statusMessage;
 
 
-    // $chAdd = curl_init();
-    // curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name=1'.$name.'&image='.$image.'&add_by=1');
-    // curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-    // curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-    // curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-    // "Content-Type: application/json",
-    //                         )
-    // );
-    // $result = curl_exec($chAdd);
-    // $err    = curl_error($chAdd);
-    // curl_close($chAdd);
+    $chAdd = curl_init();
+    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name=1'.$name.'&image='.$image.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+    curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+    "Content-Type: application/json",
+                            )
+    );
+    $result = curl_exec($chAdd);
+    $err    = curl_error($chAdd);
+    curl_close($chAdd);
 }
