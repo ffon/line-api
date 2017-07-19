@@ -73,13 +73,13 @@ function insert_data_tb($mid)
     
     $de_mid = json_decode($mid);
     $name = $de_mid->displayName;
-    //$mid= $de_mid->userId;
+    $user_id= $de_mid->userId;
     $image=$de_mid->pictureUrl;
     $sta=$de_mid->statusMessage;
 
 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name=2'.$name.'&image='.$image.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$user_id.'&line_name=2'.$name.'&image='.$image.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
