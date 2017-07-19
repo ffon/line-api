@@ -1,11 +1,11 @@
 <?php
 get_mid();
 
-function get_Name($mid)
+function get_name($mid)
 {
     $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
     $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-    $strAccessToken = "XDEio/U+1tLcglINRntoiWnm3xBRzApRnLm5FHhpqHGEtU21j01yqjlxr83equ5W6qVYXGI80LOObJe1H9EaoK4ZfSiSHwpUrRgQxlREc/aSZQavLqwyHsT1rDcxjzf9ekwtwN1VXkZsCGo9bRxI5AdB04t89/1O/w1cDnyilFU=";
+    $strAccessToken = "3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     $strUrl = "https://api.line.me/v2/bot/profile/$mid";
@@ -23,7 +23,7 @@ function get_Name($mid)
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
-   // insert_data_tb($result);
+   insert_data_tb($result);
 }
 
 function insert_data_tb($mid)
@@ -68,9 +68,14 @@ function get_mid()
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
     $get_mid =  $arrJson['events'][0]['source']['userId'];
-   // get_name($get_mid);
+    get_name($get_mid);
  
     if ($arrJson['events'][0]['message']['text'] == "a") {
+          $arrPostData = array();
+          $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+          $arrPostData['messages'][0]['type'] = "text";
+          $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
+    }else{
           $arrPostData = array();
           $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
           $arrPostData['messages'][0]['type'] = "text";
@@ -90,8 +95,8 @@ function get_mid()
     curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($ch);
     curl_close ($ch);
-    echo "result get_mid()"."<br>";
+    echo "<br>"."result get_mid()"."<br>";
     var_dump($result);
-    echo "get mid"."<br>";
+    echo "<br>"."get mid"."<br>";
     var_dump($get_mid);
 }
