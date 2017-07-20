@@ -23,11 +23,7 @@
     </style>
 </head>
 <body>
- <?php 
  
-$test = isset($_COOKIE['test'])? $_COOKIE['test']: 'no';
-echo $test;
-?> 
     <div class="container">
         <div class="row">
             <div class="col-xs-12 head-form">
@@ -93,9 +89,8 @@ echo $test;
 
 
 <?php
-//$proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-//$proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80'; 
-$strAccessToken = 'f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8Y8gQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcssXN77lyH4cRgzSRe+ubJT6jlMGO8SmAXXZaS0FNIeAQdB04t89/1O/w1cDnyilFU=';            
+
+$strAccessToken = '3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=";
 $text = $_POST['textArea'];
 $midUser = $_POST['mid'];  
   
@@ -121,8 +116,6 @@ foreach($midUser as $key => $mid){
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-       //curl_setopt($ch, CURLOPT_PROXY, $proxy);
-       //curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);
         curl_close($ch);
 }
