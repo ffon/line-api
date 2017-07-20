@@ -63,7 +63,7 @@
     echo "<br>";
     echo "<br>";
 
-    $name = $string_obj->scalar;
+    $name = $string_obj->scalar[0];
     echo "name";
     echo "<br>";
     var_dump($name);
