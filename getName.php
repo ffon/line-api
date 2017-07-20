@@ -55,7 +55,7 @@
     echo "<br>";
     echo "<br>";
 
-    $string_obj = (object)($string);
+    $string_obj = (object)($result);
     echo "string_obj var";
     echo "<br>";
     var_dump($string_obj);
