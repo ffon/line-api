@@ -79,7 +79,7 @@
     echo "<br>";
     echo "<br>";
 
-    $Object = json.parse($string);
+    $Object = json_decode($string);
     echo "obj";
     echo "<br>";
     var_dump($Object);
