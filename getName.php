@@ -74,6 +74,7 @@
     echo "name";
     echo "<br>";
     var_dump($name);
+    echo "<br>";
 
 
     $string_arr = (array)($string);
