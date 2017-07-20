@@ -54,7 +54,7 @@
                ?>
             
              <!--********************************************************************-->
-             
+               <?php for($i=0;$i<$count;$i++){ ?>
                 <form action = "push_fix.php?id=<?php $de[$i]->user_id; ?>" method="POST">
                     <div class="form-group">
                         <label>Text</label>
@@ -82,8 +82,7 @@
                                         <div class="checkbox">
                                              
                                             
-                                            <?php
-                                            for($i=0;$i<$count;$i++){ ?>
+                                            <!-- <?php for($i=0;$i<$count;$i++){ ?> -->
                                             <div class="checkbox">
                                                 <label><input type="checkbox" id="<?php echo $de[$i]->user_id; ?>" name="<?php echo mid[$i] ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                             </div>
