@@ -113,7 +113,11 @@
 
 $strAccessToken = '3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=';
  $text = $_POST['textArea'];
-$midUser = $_POST['mid'];  
+$midUser = $_POST['mid'];   
+ echo "mid User";
+ $var_dump($midUser);
+
+
   
 foreach($midUser as $key => $mid){        
         $messages = [
