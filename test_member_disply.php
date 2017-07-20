@@ -13,7 +13,7 @@
         curl_close($chAdd);
 //         var_dump($result);
         $de = json_decode($result);
-        //var_dump($de);
+        var_dump($de);
         echo $de[0]->member_name;
     ?>
 </html>
