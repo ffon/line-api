@@ -12,5 +12,7 @@
         $err    = curl_error($chAdd);
         curl_close($chAdd);
         var_dump($result);
+        $de = json_decode($result);
+        var_dump($de);
     ?>
 </html>
