@@ -46,7 +46,7 @@
                     
                  <!--Modal-->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <form method="POST" action = "push_fix.php? id= <?php echo $de[$i]->user_id; ?>">
+                        <form method="POST" action = "push_fix.php?id= <?php echo $de[$i]->user_id; ?>">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
