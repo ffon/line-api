@@ -31,7 +31,7 @@
             </div>
           
             <div class="col-md-8 col-md-offset-2">
-                <form action="push_fix.php" method="GET">
+                <form action="push_fix.php>" method="POST">
                     <div class="form-group">
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
@@ -46,7 +46,7 @@
                     
                  <!--Modal-->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <form method="GET">
+                        <form method="POST" action = "push_fix.php? id= <?php echo $de[$i]->user_id; ?>">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
