@@ -18,6 +18,6 @@
         echo $de[0]->member_name;
     
         var_dump($de);
-}
+
     ?>
 </html>
