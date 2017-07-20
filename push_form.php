@@ -31,9 +31,32 @@
             </div>
           
             <div class="col-md-8 col-md-offset-2">
-             
-             <!--********************************************************************-->
-             <?php
+            <form action = "push_fix.php?id= <?php echo $de[$i]->user_id; ?>" method="POST">
+                    <div class="form-group">
+                        <label>Text</label>
+                        <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
+                    </div>
+                    
+                    <!--buttonMember-->
+                    <div class="form-group" align="center">
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
+                        MEMBER
+                        </button>
+                    </div>
+                    
+                 <!--Modal-->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <form method="POST" >
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Member</h4>
+                                    </div>
+                                    <div class="container">
+                                         
+                                        <div class="checkbox">
+                                             <?php
                                                     
                                                 $chAdd = curl_init();
                                                 curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
@@ -51,41 +74,13 @@
                                                 $count = count($de);
                                                
                                                 
-               ?>
-            
-             <!--********************************************************************-->
-               
-                <form method="POST" action = "push_fix.php?id=<?php $_GET['id']; ?>">
-                    <div class="form-group">
-                        <label>Text</label>
-                        <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
-                    </div>
-                    
-                    <!--buttonMember-->
-                    <div class="form-group" align="center">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
-                        MEMBER
-                        </button>
-                    </div>
-                    
-                 <!--Modal-->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                     <form method="POST" action = "push_form.php?id = <?php echo $de[$i]->user_id; ?>"  >
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Member</h4>
-                                    </div>
-                                    <div class="container">
-                                         
-                                        <div class="checkbox">
-                                             
+                                                ?>
+                                            
+                                            <?php
+                                            for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
-                                                <?php for($i=0;$i<$count;$i++){ ?>
                                                 <label><input type="checkbox" id="<?php echo $de[$i]->user_id; ?>" name="<?php echo mid[$i] ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
-                                                 
-                                                  </div>
+                                            </div>
                                            <?php }?>
                                             
                                         </div>
@@ -97,9 +92,8 @@
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
-                      
-                             </form>
                             </div>
+                        </form>
                         
                     </div>
                 </form>
