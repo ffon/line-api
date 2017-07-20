@@ -55,7 +55,7 @@
             
              <!--********************************************************************-->
                
-                <form action = "push_fix.php" method="POST">
+                <form method="POST">
                     <div class="form-group">
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
