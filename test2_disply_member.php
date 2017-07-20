@@ -76,7 +76,7 @@
                                                 ?>
                                             
                                             <?php
-                                            for($i=0;$i<5;$i++){ ?>
+                                            for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
                                                 <label><input type="checkbox" value="<?php $de->user_id; ?>" name="mid"> <?php $de->member_name; ?></label>
                                             </div>
