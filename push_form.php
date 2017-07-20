@@ -54,8 +54,8 @@
                ?>
             
              <!--********************************************************************-->
-               <?php for($i=0;$i<$count;$i++){ ?>
-                <form action = "push_fix.php?id=<?php $de[$i]->user_id; ?>" method="POST">
+               
+                <form action = "push_fix.php" method="POST">
                     <div class="form-group">
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
@@ -70,7 +70,7 @@
                     
                  <!--Modal-->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <form method="POST" >
+                        <form method="POST" action = "push_fix.php?id=<?php $de[$i]->user_id; ?>" >
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -78,11 +78,9 @@
                                         <h4 class="modal-title" id="myModalLabel">Member</h4>
                                     </div>
                                     <div class="container">
-                                         
+                                         <?php for($i=0;$i<$count;$i++){ ?>
                                         <div class="checkbox">
                                              
-                                            
-                                            <!-- <?php for($i=0;$i<$count;$i++){ ?> -->
                                             <div class="checkbox">
                                                 <label><input type="checkbox" id="<?php echo $de[$i]->user_id; ?>" name="<?php echo mid[$i] ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                             </div>
