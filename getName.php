@@ -26,8 +26,12 @@
     curl_close($chAdd);
     echo "result"."<br>";
     var_dump($result);
+echo "<br>";
+echo "<br>";
+    echo "<br>";
 
-    echo "<br>"."result decode "."<br>";
+    echo "result decode ";
+echo "<br>";
     $result_decode = json_decode($result);
     var_dump($result_decode);
    echo "<br>";
@@ -57,13 +61,18 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-$string_arr = (object)($string);
+$string_obj = (object)($string);
 echo "string_arr var";
 echo "<br>";
-var_dump($string_arr);
+var_dump($string_obj);
 echo "<br>";
 echo "<br>";
 echo "<br>";
+
+$name = $string_obj->displayName;
+echo "name";
+echo "<br>";
+var_dump($name);
 
 
     
