@@ -29,8 +29,6 @@
             <div class="col-xs-12 head-form">
                 <h1 align = "center">Push Massages</h1>
             </div>
-            <?php $mid = isset($_REQUEST['mid'])? $_REQUEST['mid']: ''; 
-            echo $mid; ?>
             <div class="col-md-8 col-md-offset-2">
                 <form method="post">
                     <div class="form-group">
