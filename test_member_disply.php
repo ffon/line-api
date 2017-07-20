@@ -11,13 +11,20 @@
         $result = curl_exec($chAdd);
         $err    = curl_error($chAdd);
         curl_close($chAdd);
-//         var_dump($result);
+    
         $de = json_decode($result);
         $count = count($de);
         echo $count;
         echo $de[0]->member_name;
     
-        var_dump($de);
+        
+        for(i=0;i<$de;$i++){
+            echo $de[$i]->member_name;
+            echo "<br>";
+        }
+    
+    
+   
 
     ?>
 </html>
