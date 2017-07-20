@@ -31,24 +31,7 @@
             </div>
           
             <div class="col-md-8 col-md-offset-2">
-             <?php
-                                                    
-                   $chAdd = curl_init();
-                   curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
-                   curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-                   curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-                   curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-                   "Content-Type: application/json",
-                                           )
-                   );
-                   $result = curl_exec($chAdd);
-                   $err    = curl_error($chAdd);
-                   curl_close($chAdd);
-
-                   $de = json_decode($result);
-                   $count = count($de);
-                                           ?>
-            <form action = "push_fix.php?id= <?php echo $de[$i]->user_id; ?>" method="POST">
+                <form action="push_fix.php" method="GET">
                     <div class="form-group">
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
@@ -63,7 +46,7 @@
                     
                  <!--Modal-->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <form method="POST" >
+                        <form method="GET">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -73,9 +56,29 @@
                                     <div class="container">
                                          
                                         <div class="checkbox">
-                                         
+                                             <?php
+                                                    
+                                                $chAdd = curl_init();
+                                                curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
+                                                curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+                                                curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+                                                curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+                                                "Content-Type: application/json",
+                                                                        )
+                                                );
+                                                $result = curl_exec($chAdd);
+                                                $err    = curl_error($chAdd);
+                                                curl_close($chAdd);
+                                            
+                                                $de = json_decode($result);
+                                                $count = count($de);
+                                               
+                                                
+                                                ?>
+                                            
                                             <?php
                                             for($i=0;$i<$count;$i++){ ?>
+                                              echo i;
                                             <div class="checkbox">
                                                 <label><input type="checkbox" id="<?php echo $de[$i]->user_id; ?>" name="<?php echo mid[$i] ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                             </div>
