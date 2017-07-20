@@ -15,8 +15,6 @@
         $de = json_decode($result);
         $count = count($de);
         echo $count;
-        echo $de[0]->member_name;
-    
         
         for($i=0;i<$de;$i++){
             echo $de[$i]->member_name;
