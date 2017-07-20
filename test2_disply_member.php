@@ -55,7 +55,7 @@
                                     <div class="container">
                                          
                                         <div class="checkbox">
-                                            <label> <?php
+                                             <?php
                                                     
                                                 $chAdd = curl_init();
                                                 curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
@@ -71,10 +71,17 @@
                                             
                                                 $de = json_decode($result);
                                                 $count = count($de);
+                                                $i=0;
+                                                
                                                 ?>
-                                            <
-                                             <input type="checkbox" value="<?php for ($i=0; $i<$count; $i++) {echo $de[$i]->user_id; echo "<br>";}?>" name="<?php for ($i=0; $i<$count; $i++) {echo $de[$i]->member_name; echo "<br>";}?>"><?php for ($i=0; $i<$count; $i++) {echo $de[$i]->member_name; echo "<br>";}?> 
-                                            </label>
+                                            
+                                            <?php
+                                            while($i!=$count){ ?>
+                                           <div class="checkbox">
+                                            <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid[0]">oil</label>
+                                        </div>
+                                           <?php }?>
+                                            
                                         </div>
                                         <div class="checkbox">
                                         </div>
