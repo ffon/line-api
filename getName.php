@@ -7,7 +7,7 @@
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     
-    $strUrl = "https://api.line.me/v2/bot/profile/U7de80d0a2ceea863e831375badd2eb55";
+    $strUrl = "https://api.line.me/v2/bot/profile/U8c4eb5ebbd3493b74c6d17a77d3e6cd3";
     
     $header = array(
     'Content-Type: application/json',
