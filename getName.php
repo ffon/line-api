@@ -31,7 +31,7 @@
     $result_decode = json_decode($result);
     var_dump($result_decode);
 
-    echo "trim"."<br>";
+    echo "<br>"."trim"."<br>";
     $t = trim($result_decode);
     var_dump($result_decode);
 
