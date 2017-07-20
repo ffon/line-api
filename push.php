@@ -116,6 +116,8 @@ $strAccessToken = '3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqR
 $midUser = $_POST['mid'];   
  echo "mid User";
  $var_dump($midUser);
+  echo "textArea";
+ $var_dump($text);
 
 
   
