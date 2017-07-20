@@ -31,7 +31,7 @@
             </div>
           
             <div class="col-md-8 col-md-offset-2">
-                <form method="post">
+                <form action="push_fix.php" method="post">
                     <div class="form-group">
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
