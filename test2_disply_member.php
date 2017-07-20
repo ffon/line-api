@@ -76,10 +76,11 @@
                                                 ?>
                                             
                                             <?php
-                                            while($i!=$count){ ?>
+                                            while($i!=$count) ?>
                                            <div class="checkbox">
                                             <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid[0]">oil</label>
                                         </div>
+                                         $i++;
                                            <?php }?>
                                             
                                         </div>
