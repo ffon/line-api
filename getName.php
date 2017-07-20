@@ -32,7 +32,7 @@
     var_dump($result_decode);
     
     $string = preg_replace('/\s+/', '', $result);
-    
+    echo "<br>";
     echo "preg_replace";
     echo "<br>";
     echo $string;
