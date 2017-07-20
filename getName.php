@@ -30,21 +30,42 @@
     echo "<br>"."result decode "."<br>";
     $result_decode = json_decode($result);
     var_dump($result_decode);
-    
-    $string = preg_replace('/\s+/', '', $result);
+   echo "<br>";
+echo "<br>";
     echo "<br>";
+
+$string = preg_replace('/\s+/', '', $result);
     echo "preg_replace";
     echo "<br>";
     echo $string;
+echo "<br>";
+echo "<br>";
     echo "<br>";
+
     echo "preg_replace var";
     echo "<br>";
     var_dump($string);
 echo "<br>";
-$string_decode = json_decode($string);
-echo "string_decode var";
 echo "<br>";
+    echo "<br>";
+
+    $string_decode = json_decode($string);
+    echo "string_decode var";
+    echo "<br>";
     var_dump($string_decode);
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+    $string_arr = (array)json_decode($string);
+echo "string_arr var";
+var_dump($string_arr);
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+
+    
     
     
 //     $name = $result_decode->displayName;
