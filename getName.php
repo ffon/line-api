@@ -79,9 +79,15 @@
     echo "<br>";
     echo "<br>";
 
-    $someObject = json_decode($string);
-    //print_r($someObject);      // Dump all data of the Object
-    echo $someObject[0]->displayName;
+    $Object = json_decode($string);
+    echo "obj";
+    echo "<br>";
+    var_dump($Object);
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "Name";
+    echo $Object->displayName;
    
 //     $name = $result_decode->displayName;
 //     var_dump($name);
