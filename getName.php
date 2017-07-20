@@ -57,8 +57,9 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-    $string_arr = (array)json_decode($string);
+$string_arr = (array)($string);
 echo "string_arr var";
+echo "<br>";
 var_dump($string_arr);
 echo "<br>";
 echo "<br>";
