@@ -92,10 +92,10 @@ function insert_data_tb($data)
 //     $user_id= $de_mid->userId;
 //     $image=$de_mid->pictureUrl;
 //     $sta=$de_mid->statusMessage;
-
+$string = preg_replace('/\s+/', '', $data);
 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?data='.$data.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?data='.$string.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
