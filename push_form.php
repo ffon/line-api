@@ -32,7 +32,7 @@
           
             <div class="col-md-8 col-md-offset-2">
              
-             //********************************************************************
+             <!--********************************************************************-->
              <?php
                                                     
                                                 $chAdd = curl_init();
@@ -51,11 +51,11 @@
                                                 $count = count($de);
                                                
                                                 
-                                                ?>
+               ?>
             
-             //********************************************************************
+             <!--********************************************************************-->
              
-                <form action = "push_fix.php?id= <?php echo $de[$i]->user_id; ?>" method="POST">
+                <form action = "push_fix.php?id=<?php $de[$i]->user_id; ?>" method="POST">
                     <div class="form-group">
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
