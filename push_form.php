@@ -70,7 +70,7 @@
                     
                  <!--Modal-->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                     
+                     <form method="POST" action = "push_form.php?id = <?php echo $de[$i]->user_id; ?>"  >
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -83,9 +83,8 @@
                                              
                                             <div class="checkbox">
                                                 <?php for($i=0;$i<$count;$i++){ ?>
-                                                 <form method="POST" action = "push_form.php?id = <?php echo $de[$i]->user_id; ?>"  >
                                                 <label><input type="checkbox" id="<?php echo $de[$i]->user_id; ?>" name="<?php echo mid[$i] ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
-                                                 </form>
+                                                 
                                                   </div>
                                            <?php }?>
                                             
@@ -99,7 +98,7 @@
                                     </div>
                                 </div>
                             </div>
-                       
+                       </form>
                         
                     </div>
                 </form>
