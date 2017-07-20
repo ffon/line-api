@@ -18,12 +18,7 @@
     
         $de = json_decode($result);
         $count = count($de);
-        
-        
-        for($i=0;$i<$count;$i++){
-            echo $de[$i]->member_name;
-            echo "<br>";
-        }
+     
         $j=0;
         while($j<$count){
             echo $de[$j]->member_name;
@@ -31,8 +26,6 @@
             $j++;
         }
     
-    
-   
     ?>
    
 </html>
