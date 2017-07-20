@@ -31,7 +31,7 @@
     $result_decode = json_decode($result);
     var_dump($result_decode);
     
-    $string = preg_replace('/\s+/', '', $result_decode);
+    $string = preg_replace('/\s+/', '', $result);
     
     echo "preg_replace";
     echo "<br>";
