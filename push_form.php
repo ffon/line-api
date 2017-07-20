@@ -51,7 +51,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Member</h4>
+                                        <h4 class="modal-title" id="myModalLabel">Send</h4>
                                     </div>
                                     <div class="container">
                                          
@@ -79,7 +79,7 @@
                                             <?php
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="<?php echo mid[$i] ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
+                                                <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="<?php print_r $mid[$i] ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                             </div>
                                            <?php }?>
                                             
