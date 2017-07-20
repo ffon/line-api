@@ -23,16 +23,16 @@ function getMid()
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
     $mid = $arrJson['events'][0]['source']['userId'];
-
     getName($mid);
     
-//      if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
-//         $arrPostData = array();
-//         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-//         $arrPostData['messages'][0]['type'] = "text";
-//         $arrPostData['messages'][0]['text'] = "สวัสดี ";
+     if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+        $arrPostData = array();
+        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+        $arrPostData['messages'][0]['type'] = "text";
+        $arrPostData['messages'][0]['text'] = "สวัสดี ";
  
-//      }else{
+      }
+//         else{
 //         $arrPostData = array();
 //         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 //         $arrPostData['messages'][0]['type'] = "text";
