@@ -28,7 +28,7 @@
     var_dump($result);
 
     echo "<br>"."result decode "."<br>";
-    $result_decode = (array)json_decode($result);
+    $result_decode = json_decode($result);
     var_dump($result_decode);
 
     echo "trim"."<br>";
