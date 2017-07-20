@@ -30,11 +30,17 @@
     echo "<br>"."result decode "."<br>";
     $result_decode = json_decode($result);
     var_dump($result_decode);
-
-    echo "<br>"."trim"."<br>";
-    $t = trim($result_decode);
-    var_dump($result_decode);
-
+    
+    $string = preg_replace('/\s+/', '', $result_decode);
+    
+    echo "preg_replace";
+    echo "<br>";
+    echo $string;
+    echo "<br>";
+    echo "preg_replace var";
+    echo "<br>";
+    var_dump($string);
+    
     
 //     $name = $result_decode->displayName;
 //     var_dump($name);
