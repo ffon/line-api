@@ -27,7 +27,7 @@
     echo "result"."<br>";
     var_dump($result);
 
-    echo "result decode "."<br>";
+    echo "<br>"."result decode "."<br>";
     $result_decode = (array)json_decode($result);
     var_dump($result_decode);
     
