@@ -13,7 +13,11 @@
         curl_close($chAdd);
 //         var_dump($result);
         $de = json_decode($result);
-        var_dump($de);
+        $count = count($de);
+        echo $count;
         echo $de[0]->member_name;
+    
+        var_dump($de);
+}
     ?>
 </html>
