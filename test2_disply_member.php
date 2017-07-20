@@ -71,16 +71,16 @@
                                             
                                                 $de = json_decode($result);
                                                 $count = count($de);
-                                                $i=0;
+                                               
                                                 
                                                 ?>
                                             
                                             <?php
-                                            while($i!=$count) ?>
+                                            for($i=0;$i<$count;$i++) ?>
                                            <div class="checkbox">
                                             <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid[0]">oil</label>
                                         </div>
-                                         $i++;
+                                      
                                            <?php }?>
                                             
                                         </div>
