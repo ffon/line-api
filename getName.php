@@ -40,6 +40,10 @@
     echo "preg_replace var";
     echo "<br>";
     var_dump($string);
+echo "<br>";
+$string_decode = json_decode($string);
+echo "string_decode var";
+    var_dump($string_decode);
     
     
 //     $name = $result_decode->displayName;
