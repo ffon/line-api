@@ -79,7 +79,7 @@
                                             <?php
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="<?php $de[$i]->user_id; ?>" name="<?php mid[$i];" ?>> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
+                                                <label><input type="checkbox" value="<?php $de[$i]->user_id; ?>" name="<?php mid[$i]; ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                             </div>
                                            <?php }?>
                                             
