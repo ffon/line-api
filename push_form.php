@@ -80,7 +80,7 @@
                                             for($i=0;$i<$count;$i++){ ?>
                                               <?php echo $i; ?>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" id="<?php echo $de[$i]->user_id; ?>" name="<?php echo mid[$i] ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
+                                                <label><input type="checkbox" id="U7de80d0a2ceea863e831375badd2eb55" name="mid"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                             </div>
                                            <?php }?>
                                             
