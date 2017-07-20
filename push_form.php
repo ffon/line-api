@@ -97,8 +97,9 @@
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
+                      
+                             </form>
                             </div>
-                       </form>
                         
                     </div>
                 </form>
