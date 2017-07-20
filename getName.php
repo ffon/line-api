@@ -80,7 +80,7 @@
     echo "<br>";
 
     $someObject = json_decode($string);
-    print_r($someObject);      // Dump all data of the Object
+    //print_r($someObject);      // Dump all data of the Object
     echo $someObject[0]->displayName;
    
 //     $name = $result_decode->displayName;
