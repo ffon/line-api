@@ -57,7 +57,7 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-$string_arr = (array)($string);
+$string_arr = (object)($string);
 echo "string_arr var";
 echo "<br>";
 var_dump($string_arr);
