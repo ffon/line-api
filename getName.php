@@ -62,6 +62,14 @@
     echo "<br>";
     echo "<br>";
 
+    $string_en = json_encode($string);
+    echo "string_encode var";
+    echo "<br>";
+    var_dump($string_encode);
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+
     $string_obj = (object)($string);
     echo "string_obj var";
     echo "<br>";
@@ -75,7 +83,8 @@
     echo "<br>";
     var_dump($name);
     echo "<br>";
-
+    echo "<br>";
+    echo "<br>";
 
     $string_arr = (array)($string);
     echo "string_arr var";
