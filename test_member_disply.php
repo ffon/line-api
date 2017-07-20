@@ -16,7 +16,7 @@
         $count = count($de);
         
         
-        for($i=0;$i<9;$i++){
+        for($i=0;$i<$count;$i++){
             echo $de[$i]->member_name;
             echo "<br>";
         }
