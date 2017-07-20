@@ -78,7 +78,8 @@
                                             <?php
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid[0]">oil</label>
+                                                <!-- <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid[0]">oil</label> -->
+                                                <label><input type="checkbox" value="<?php for ($i=0; $i<$count; $i++) {echo $de[$i]->user_id; echo "<br>";}?>" name="<?php for ($i=0; $i<$count; $i++) {echo $de[$i]->member_name; echo "<br>";}?>"><?php for ($i=0; $i<$count; $i++) {echo $de[$i]->member_name; echo "<br>";}?></label> 
                                             </div>
                                            <?php }?>
                                             
