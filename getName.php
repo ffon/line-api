@@ -40,13 +40,6 @@
     echo "<br>";
 
     $string = preg_replace('/\s+/', '', $result);
-    echo "preg_replace";
-    echo "<br>";
-    echo $string;
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-
     echo "preg_replace var";
     echo "<br>";
     var_dump($string);
@@ -58,14 +51,6 @@
     echo "string_decode var";
     echo "<br>";
     var_dump($string_decode);
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-
-    $string_en = utf8_encode($string);
-    echo "utf8_encode var";
-    echo "<br>";
-    var_dump($string_encode);
     echo "<br>";
     echo "<br>";
     echo "<br>";
@@ -94,9 +79,7 @@
     echo "<br>";
     echo "<br>";
 
-    
-    
-    
+   
 //     $name = $result_decode->displayName;
 //     var_dump($name);
 //     echo "<br>".$result_decode->userId;
