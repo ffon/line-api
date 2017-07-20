@@ -26,7 +26,7 @@
         }
         $j=0;
         while($j<$count){
-            echo $de[$i]->member_name;
+            echo $de[$j]->member_name;
             echo "<br>";
             $j++;
         }
