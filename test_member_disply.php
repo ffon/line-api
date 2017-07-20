@@ -14,9 +14,9 @@
     
         $de = json_decode($result);
         $count = count($de);
-        echo $count;
         
-        for($i=0;i<9;$i++){
+        
+        for($i=0;$i<9;$i++){
             echo $de[$i]->member_name;
             echo "<br>";
         }
