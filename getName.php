@@ -1,4 +1,5 @@
 <?php
+
 //     $proxy = 'http://fixie:aChVS27TDH6KbKG@velodrome.usefixie.com:80';
 //     $proxyauth = 'http://fixie:aChVS27TDH6KbKG@velodrome.usefixie.com:80';
 
@@ -18,7 +19,7 @@
     curl_setopt($chAdd, CURLOPT_URL, $strUrl);
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($chAdd, CURLOPT_HTTPHEADER,$header);
+    curl_setopt($chAdd, CURLOPT_HTTPHEADER, $header);
 //     curl_setopt($ch, CURLOPT_PROXY, $proxy);
 //     curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($chAdd);
@@ -26,54 +27,62 @@
     curl_close($chAdd);
     echo "result"."<br>";
     var_dump($result);
-echo "<br>";
-echo "<br>";
+    echo "<br>";
+    echo "<br>";
     echo "<br>";
 
     echo "result decode ";
-echo "<br>";
+    echo "<br>";
     $result_decode = json_decode($result);
     var_dump($result_decode);
-   echo "<br>";
-echo "<br>";
+    echo "<br>";
+    echo "<br>";
     echo "<br>";
 
-$string = preg_replace('/\s+/', '', $result);
+    $string = preg_replace('/\s+/', '', $result);
     echo "preg_replace";
     echo "<br>";
     echo $string;
-echo "<br>";
-echo "<br>";
+    echo "<br>";
+    echo "<br>";
     echo "<br>";
 
     echo "preg_replace var";
     echo "<br>";
     var_dump($string);
-echo "<br>";
-echo "<br>";
+    echo "<br>";
+    echo "<br>";
     echo "<br>";
 
     $string_decode = json_decode($string);
     echo "string_decode var";
     echo "<br>";
     var_dump($string_decode);
-echo "<br>";
-echo "<br>";
-echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
 
-$string_obj = (object)($string);
-echo "string_arr var";
-echo "<br>";
-var_dump($string_obj);
-echo "<br>";
-echo "<br>";
-echo "<br>";
+    $string_obj = (object)($string);
+    echo "string_obj var";
+    echo "<br>";
+    var_dump($string_obj);
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
 
-$name = $string_obj->displayName;
-echo "name";
-echo "<br>";
-var_dump($name);
+    $name = $string_obj->scalar;
+    echo "name";
+    echo "<br>";
+    var_dump($name);
 
+
+    $string_arr = (array)($string);
+    echo "string_arr var";
+    echo "<br>";
+    var_dump($string_arr);
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
 
     
     
