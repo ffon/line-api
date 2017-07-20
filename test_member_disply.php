@@ -18,7 +18,7 @@
         echo $de[0]->member_name;
     
         
-        for(i=0;i<$de;$i++){
+        for($i=0;i<$de;$i++){
             echo $de[$i]->member_name;
             echo "<br>";
         }
