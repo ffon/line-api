@@ -30,6 +30,11 @@
     echo "<br>"."result decode "."<br>";
     $result_decode = (array)json_decode($result);
     var_dump($result_decode);
+
+    echo "trim"."<br>";
+    $t = trim($result_decode);
+    var_dump($result_decode);
+
     
 //     $name = $result_decode->displayName;
 //     var_dump($name);
