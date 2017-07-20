@@ -78,9 +78,9 @@
                                         <h4 class="modal-title" id="myModalLabel">Member</h4>
                                     </div>
                                     <div class="container">
-                                         <?php for($i=0;$i<$count;$i++){ ?>
+                                         
                                         <div class="checkbox">
-                                             
+                                             <?php for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
                                                 <label><input type="checkbox" id="<?php echo $de[$i]->user_id; ?>" name="<?php echo mid[$i] ?>"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                             </div>
