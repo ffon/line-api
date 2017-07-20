@@ -62,8 +62,8 @@
     echo "<br>";
     echo "<br>";
 
-    $string_en = json_encode($string);
-    echo "string_encode var";
+    $string_en = utf8_encode($string);
+    echo "utf8_encode var";
     echo "<br>";
     var_dump($string_encode);
     echo "<br>";
