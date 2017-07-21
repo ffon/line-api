@@ -25,18 +25,18 @@ function getMid()
     $mid = $arrJson['events'][0]['source']['userId'];
     getName($mid);
     
-//      if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
-//         $arrPostData = array();
-//         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-//         $arrPostData['messages'][0]['type'] = "text";
-//         $arrPostData['messages'][0]['text'] = "สวัสดี";
+     if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+        $arrPostData = array();
+        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+        $arrPostData['messages'][0]['type'] = "text";
+        $arrPostData['messages'][0]['text'] = "สวัสดี";
  
-//       }else{
-//         $arrPostData = array();
-//         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-//         $arrPostData['messages'][0]['type'] = "text";
-//         $arrPostData['messages'][0]['text'] = "สวัสดี 🤷";         
-//      }
+      }else{
+        $arrPostData = array();
+        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+        $arrPostData['messages'][0]['type'] = "text";
+        $arrPostData['messages'][0]['text'] = "สวัสดี 🤷";         
+     }
     
 
     $ch = curl_init();
@@ -84,14 +84,7 @@ function getName($mid)
 
 function insert_data_tb($data)
 {
-//     var_dump($mid);
-    
-//     $de_mid = json_decode($mid);
-//     $name = $de_mid->displayName;
-//     $user_id= $de_mid->userId;
-//     $image=$de_mid->pictureUrl;
-//     $sta=$de_mid->statusMessage;
-$string = preg_replace('/\s+/', '', $data);
+    $string = preg_replace('/\s+/', '', $data); 
 
     $chAdd = curl_init();
     curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?data='.$string.'&add_by=1');
