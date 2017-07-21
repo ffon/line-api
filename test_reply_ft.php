@@ -12,7 +12,7 @@ function getMid()
     $arrHeader[] = "Content-Type: application/json";
     $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
     
-    if($arrJson['events'][0]['follow']){
+    if($arrJson['events'][0]['message']['follow']){
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "follow";
