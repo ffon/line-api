@@ -1,11 +1,4 @@
-<html>
-    <form method="GET">
-    <input type="text" name="mid">
-    </form>
 <?php
-
-    $mid=$_GET('mid');
-    echo $mid;
 
     $strAccessToken = "3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=";
     
@@ -93,7 +86,7 @@
     
     
     ?>
-</html>
+
    
 
     
