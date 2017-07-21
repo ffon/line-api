@@ -1,0 +1,43 @@
+<html lang="th">
+<head>
+  <title>Line@</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row content">   
+  <form action="insertLineMaster.php" class="form-horizontal" method="post">         
+  <fieldset>
+    <legend>Insert Line@</legend>
+    
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Name</label>
+      <div class="col-lg-5">
+        <textarea class="form-control" rows="3" id="textArea"  name="name"></textarea>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Token</label>
+      <div class="col-lg-8">
+        <textarea class="form-control" rows="3" id="textArea"  name="token"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+      </div>
+    </div>
+    
+  </fieldset>
+</form>
+</div>
+</div>
+</body>
+</html>
