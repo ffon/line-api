@@ -1,7 +1,9 @@
 <html>
 <?php
     $mid=$_GET('mid');
-    echo $mid;
+    echo "8888";
+    var_dump($mid);
+    
 //     $strAccessToken = "3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=";
     
 //     $content = file_get_contents('php://input');
