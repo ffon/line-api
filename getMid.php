@@ -1,6 +1,7 @@
 <html>
 <?php
-    $mid=$_GET("mid");
+    $mid = $_GET["mid"];
+    echo $mid;
     echo "8888";
     var_dump($mid);
     
