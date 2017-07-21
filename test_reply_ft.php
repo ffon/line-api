@@ -12,20 +12,21 @@ function getMid()
     $arrHeader[] = "Content-Type: application/json";
     $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
     
-    if($arrJson['events'][0]['message']['follow']){
+    //if($arrJson['events'][0]['message']['follow']){
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "follow";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
         $mid = $arrJson['events'][0]['source']['userId'];
         getName($mid);
-    }else if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
-        $arrPostData = array();
-        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-        $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "สวัสดี🙋";
+   // }
+//     else if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+//         $arrPostData = array();
+//         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//         $arrPostData['messages'][0]['type'] = "text";
+//         $arrPostData['messages'][0]['text'] = "สวัสดี🙋";
  
-      }
+//       }
 //     else{
 //         $arrPostData = array();
 //         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
