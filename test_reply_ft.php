@@ -19,7 +19,7 @@ function getMid()
         $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
         $mid = $arrJson['events'][0]['source']['userId'];
         getName($mid);
-   // }
+ //   }
 //     else if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
 //         $arrPostData = array();
 //         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -39,7 +39,7 @@ function getMid()
     curl_setopt($ch, CURLOPT_HEADER, false);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrPostData));
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $arrPostData);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     $result = curl_exec($ch);
