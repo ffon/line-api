@@ -12,14 +12,19 @@ function getMid()
     $arrHeader[] = "Content-Type: application/json";
     $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
     
-    if($arrJson['events'][0]['type']['follow']){
+    if($arrJson['events']['follow']){
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "follow";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
         $mid = $arrJson['events'][0]['source']['userId'];
         getName($mid);
-    }
+    } else{
+        $arrPostData = array();
+        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+        $arrPostData['messages'][0]['type'] = "text";
+        $arrPostData['messages'][0]['text'] = "สวัสดี 🤷";         
+     }
 //     else if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
 //         $arrPostData = array();
 //         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -27,12 +32,7 @@ function getMid()
 //         $arrPostData['messages'][0]['text'] = "สวัสดี🙋";
  
      // }
-    else{
-        $arrPostData = array();
-        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-        $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "สวัสดี 🤷";         
-     }
+   
     
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $strUrl);
