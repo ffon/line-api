@@ -6,11 +6,11 @@ $midUser = $_GET['mid'];
 
 $strAccessToken = $token;
 echo 'token';echo "<br>";
-var_dump($token);
+var_dump($token);echo "<br>";
 echo 'strAccessToken';echo "<br>";
-var_dump($strAccessToken);
+var_dump($strAccessToken);echo "<br>";
 echo "Mid User ";echo "<br>";
-var_dump($midUser);
+var_dump($midUser);echo "<br>";
 
 foreach($midUser as $key => $mid){        
         $messages = [
@@ -37,6 +37,8 @@ foreach($midUser as $key => $mid){
         $result = curl_exec($ch);
         curl_close($ch);
 }
+echo "result ";echo "<br>";
+var_dump($result);
  
 
  
