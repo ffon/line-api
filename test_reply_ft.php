@@ -17,13 +17,14 @@ function getMid()
     $arrPostData['messages'][0]['type'] = "follow";
     $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
     $mid = $arrJson['events'][0]['source']['userId'];
-    getName($mid);
+    
     
     }if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "สวัสดี🙋";
+        $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
+        getName($mid);
  
      }else{
         $arrPostData = array();
