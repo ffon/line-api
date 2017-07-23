@@ -36,8 +36,8 @@
                     <div class="form-group">
                         <label>Line@</label><br>
                        <select name="cars">
-                        <option value="SayhWjVgzo6nk40VS+anrzU+guXmPffyhlYiwLkI859ODhLQNJR5Spsfm8+HFN7bQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcsTyC1EC8JMhzvS9soYMvVYsqeEWtLJWsgwb7Z7VcbMfAdB04t89/1O/w1cDnyilFU=">ffon</option>
-                        <option value="3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=">ffon3</option>
+                        <option value="SayhWjVgzo6nk40VS+anrzU+guXmPffyhlYiwLkI859ODhLQNJR5Spsfm8+HFN7bQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcsTyC1EC8JMhzvS9soYMvVYsqeEWtLJWsgwb7Z7VcbMfAdB04t89/1O/w1cDnyilFU=" name="token_line_mas">ffon</option>
+                        <option value="3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=" name="token_line_mas">ffon3</option>
                      </select>
 <!--                     <label>Line@</label><br>
                             <input type="radio"  class="btn btn-primary"  value="SayhWjVgzo6nk40VS+anrzU+guXmPffyhlYiwLkI859ODhLQNJR5Spsfm8+HFN7bQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcsTyC1EC8JMhzvS9soYMvVYsqeEWtLJWsgwb7Z7VcbMfAdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon</input>
