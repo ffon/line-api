@@ -34,14 +34,34 @@
             <div class="col-md-8 col-md-offset-2">
                 <form action="push_msg_selcet_no_fix_token.php.php" method="GET">
                     <div class="form-group">
+                          <?php
+                            $chAdd = curl_init();
+                            curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
+                            curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+                            curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+                            curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+                            "Content-Type: application/json",
+                                                    )
+                            );
+                            $result = curl_exec($chAdd);
+                            $err    = curl_error($chAdd);
+                            curl_close($chAdd);
+
+                            $de_line_mas = json_decode($result);
+                            $count_line_mas = count($de_line_mas);
+                        
+                            ?>
+
+                        
                         <label>Line@</label><br>
-                       <select name="cars">
-                        <option value="SayhWjVgzo6nk40VS+anrzU+guXmPffyhlYiwLkI859ODhLQNJR5Spsfm8+HFN7bQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcsTyC1EC8JMhzvS9soYMvVYsqeEWtLJWsgwb7Z7VcbMfAdB04t89/1O/w1cDnyilFU=" name="token_line_mas">ffon</option>
-                        <option value="3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=" name="token_line_mas">ffon3</option>
-                     </select>
+                            <?php for($j=0;$j<$count_line_mas;$j++){ ?>
+                           <select name="token_line_mas[]">
+                                <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php  echo $de_line_mas[$j]->line_name; ?></option>
+                           </select>
+                        <? } ?>
 <!--                     <label>Line@</label><br>
-                            <input type="radio"  class="btn btn-primary"  value="SayhWjVgzo6nk40VS+anrzU+guXmPffyhlYiwLkI859ODhLQNJR5Spsfm8+HFN7bQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcsTyC1EC8JMhzvS9soYMvVYsqeEWtLJWsgwb7Z7VcbMfAdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon</input>
-                            <input type="radio"  class="btn btn-primary"  value="3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon3</input> -->
+                            <input type="radio"  value="SayhWjVgzo6nk40VS+anrzU+guXmPffyhlYiwLkI859ODhLQNJR5Spsfm8+HFN7bQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcsTyC1EC8JMhzvS9soYMvVYsqeEWtLJWsgwb7Z7VcbMfAdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon</input>
+                            <input type="radio"  value="3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon3</input> -->
                          <br> 
                 
                         <label>Text</label>
