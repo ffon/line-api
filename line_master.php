@@ -14,5 +14,7 @@
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
+
+    window.open("http://uat.dxplace.com/dxtms/get_line_master");
     
 ?>
