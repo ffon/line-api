@@ -19,7 +19,7 @@ function getMid()
 //     $mid = $arrJson['events'][0]['source']['userId'];
     
     
-if ($arrJson['events'][0]['follow']) {
+if ($arrJson['events'][0]['event']['type'] == 'follow') {
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "follow";
