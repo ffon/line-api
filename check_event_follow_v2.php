@@ -8,10 +8,18 @@
     $arrHeader[] = "Content-Type: application/json";
     $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
-    $arrPostData = array();
-    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = "ID : ".$arrJson['events'][0]['type'];
+    
+    if($arrJson['events'][0]['type'] == $arrJson['events'][0]['type']['follow']){
+        $arrPostData = array();
+        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+        $arrPostData['messages'][0]['type'] = "text";
+        $arrPostData['messages'][0]['text'] = "ID : ".$arrJson['events'][0]['type'];
+    }else{
+        $arrPostData = array();
+        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+        $arrPostData['messages'][0]['type'] = "text";
+        $arrPostData['messages'][0]['text'] = "ID : ".$arrJson['events'][0]['type'];
+    }
 
     
     
