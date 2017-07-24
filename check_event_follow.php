@@ -9,8 +9,9 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
-		// Reply only when message sent is in 'text' format
-		 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if($event['type'] == 'event' && $event['type']['events'] == 'follow'){
+			
+		}else if ($event['type'] == 'message' && $event['message']['type'] == 'text') {// Reply only when message sent is in 'text' format
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
@@ -21,7 +22,6 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $event['type']
 			];
-
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
@@ -40,12 +40,12 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			echo $result . "\r\n";
+			echo "result : ".$result . "\r\n";
 		}
 	}
 }
 
 
-var_dump($resut);
+//var_dump($resut);
 
 ?>
