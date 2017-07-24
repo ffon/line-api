@@ -45,6 +45,7 @@ if ($arrJson['events'][0]['event']['type'] == 'follow') {
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     $result = curl_exec($ch);
     curl_close ($ch);
+    var_dump($result);
     
 }
 function getName($mid)
