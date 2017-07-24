@@ -15,6 +15,6 @@
     $err    = curl_error($chAdd);
     curl_close($chAdd);
 
-    window.open("http://uat.dxplace.com/dxtms/get_line_master");
+//     window.open("http://uat.dxplace.com/dxtms/get_line_master");
     
 ?>
