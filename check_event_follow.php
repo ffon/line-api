@@ -10,7 +10,14 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		
-		 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if($event['events']['type'] == 'follow'){
+			 $replyToken = $event['replyToken'];
+			 $messages = [
+				'type' => 'follow',
+				'text' => $event['type']
+			];
+			
+		}else if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			$text = $event['message']['text'];
 			
 			 $replyToken = $event['replyToken'];
