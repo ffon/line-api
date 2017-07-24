@@ -1,4 +1,4 @@
 <?php
-$g = $GET['token'];
+$g = $_GET['token'];
 var_dump($g);
 ?>
