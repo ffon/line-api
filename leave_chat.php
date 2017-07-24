@@ -3,7 +3,7 @@
     $strAccessToken = "3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
-    $strUrl = "https://api.line.me/v2/bot/room/86db43ef7fa77db0eecf04eb6aba0575/leave";
+    $strUrl = "https://api.line.me/v2/bot/room/U7de80d0a2ceea863e831375badd2eb55/leave";
     $arrHeader = array();
     $arrHeader[] = "Content-Type: application/json";
     $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
