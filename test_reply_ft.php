@@ -19,7 +19,7 @@ function getMid()
 //     $mid = $arrJson['events'][0]['source']['userId'];
     
     
-    }if ($arrJson['events'][0]['follow']) {
+if ($arrJson['events'][0]['follow']) {
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "follow";
@@ -27,10 +27,11 @@ function getMid()
         getName($mid);
  
      }else{
+    
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "สวัสดี 🤷";         
+        $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['follow'];         
      }
    
     
