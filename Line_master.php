@@ -2,6 +2,8 @@
 
     $name = isset($_POST['name']) ? $_POST['name'] : 0;
     $token = isset($_POST['token']) ? $_POST['token'] : 0;
+    echo "token"."<br>";
+    var_dump($token);
 
     $chAdd = curl_init();
     curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$token.'&add_by=1');
