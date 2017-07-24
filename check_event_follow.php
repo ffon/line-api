@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
 	}
 }
 
-
-//var_dump($resut);
+echo "5";
+var_dump($resut);
 
 ?>
