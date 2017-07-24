@@ -15,7 +15,7 @@
 //     $mid = $arrJson['events'][0]['source']['userId'];
     
     
-if ($arrJson['events'][0]['event']['follow']) {
+if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['events'][0]['type'] = "follow";
@@ -27,7 +27,7 @@ if ($arrJson['events'][0]['event']['follow']) {
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['follow'];         
+        $arrPostData['messages'][0]['text'] = $arrJson['events'][0];         
      }
    
     
