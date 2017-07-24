@@ -20,7 +20,21 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $event['type']
 			];
-		}
+		}else if($event['type'] == 'message' && $event['message']['sticker']){
+			 
+			
+			$replyToken = $event['replyToken'];
+			$messages = [
+				'type' => 'text',
+				'text' => $event['type']
+			];
+		 }else{
+			$replyToken = $event['replyToken'];
+			$messages = [
+				'type' => 'text',
+				'text' => $event['type']
+			];
+		 }
 		// Make a POST Request to Messaging API to reply to sender
 		$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
