@@ -8,27 +8,27 @@
     $arrHeader[] = "Content-Type: application/json";
     $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
     
-//     $arrPostData = array();
-//     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-//     $arrPostData['messages'][0]['type'] = "follow";
-//     $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
-//     $mid = $arrJson['events'][0]['source']['userId'];
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "follow";
+    $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
+    $mid = $arrJson['events'][0]['source']['userId'];
     
     
-if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
-        $arrPostData = array();
-        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-        $arrPostData['events'][0]['type'] = "follow";
-        $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
-        //getName($mid);
+// if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+//         $arrPostData = array();
+//         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//         $arrPostData['events'][0]['type'] = "follow";
+//         $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'];
+//         //getName($mid);
  
-     }else{
+//      }else{
     
-        $arrPostData = array();
-        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-        $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = $arrJson['events'][0];         
-     }
+//         $arrPostData = array();
+//         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//         $arrPostData['messages'][0]['type'] = "text";
+//         $arrPostData['messages'][0]['text'] = $arrJson['events'][0];         
+//      }
    
     
     $ch = curl_init();
