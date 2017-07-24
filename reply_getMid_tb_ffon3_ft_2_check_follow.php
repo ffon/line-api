@@ -18,7 +18,7 @@ function getMid()
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId'].'<br>'."(event type follow : ".$arrJson['events'][0]['type'].")";
+        $arrPostData['messages'][0]['text'] = "สวัสดี ID = ".$arrJson['events'][0]['source']['userId']."(event type follow : ".$arrJson['events'][0]['type'].")";
         $mid = $arrJson['events'][0]['source']['userId'];
         getName($mid);
  
