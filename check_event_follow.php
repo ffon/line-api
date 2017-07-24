@@ -10,14 +10,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		
-		if($event['events']['type'] == 'follow'){
-			 $replyToken = $event['replyToken'];
-			 $messages = [
-				'type' => 'follow',
-				'text' => $event['events'][0]['source']['userId']
-			];
-			
-		}else if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			$text = $event['message']['text'];
 			
 			 $replyToken = $event['replyToken'];
@@ -26,18 +19,11 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $event['type']
 			];
-		}else if($event['type'] == 'message' && $event['message']['sticker']){
 			 
-			
+		}else{
 			$replyToken = $event['replyToken'];
 			$messages = [
-				'type' => 'sticker',
-				'text' => $event['type']
-			];
-		 }else{
-			$replyToken = $event['replyToken'];
-			$messages = [
-				
+				'type' => $events['events'],
 				'text' => $event['type']
 			];
 		 }
