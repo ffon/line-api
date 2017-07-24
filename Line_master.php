@@ -4,9 +4,13 @@
     $token = isset($_POST['token']) ? $_POST['token'] : 0;
     echo "token"."<br>";
     var_dump($token);
+    
+    $en_token = json_encode($token);
+    echo "token en"."<br>";
+    var_dump($en_token);
 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$token.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$en_token.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
