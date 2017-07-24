@@ -13,12 +13,12 @@
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "ID : ".$arrJson['events'][0]['type'];
+        $arrPostData['messages'][0]['text'] = "event type follow : ".$arrJson['events'][0]['type'];
     }else{
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "ID : ".$arrJson['events'][0]['type'];
+        $arrPostData['messages'][0]['text'] = "event type : ".$arrJson['events'][0]['type'];
     }
 
     
