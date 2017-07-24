@@ -9,14 +9,20 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
-		 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {// Reply only when message sent is in 'text' format
-			// Get text sent
+		
+		if($event['events']['type'] == 'follow'){
+			 $replyToken = $event['replyToken'];
+			 $messages = [
+				'type' => 'follow',
+				'text' => $event['events'][0]['source']['userId']
+			];
+			
+		}else if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			$text = $event['message']['text'];
-			// Get replyToken
-			$replyToken = $event['replyToken'];
+			
+			 $replyToken = $event['replyToken'];
 
-			// Build message to reply back
-			$messages = [
+			 $messages = [
 				'type' => 'text',
 				'text' => $event['type']
 			];
@@ -25,13 +31,13 @@ if (!is_null($events['events'])) {
 			
 			$replyToken = $event['replyToken'];
 			$messages = [
-				'type' => 'text',
+				'type' => 'sticker',
 				'text' => $event['type']
 			];
 		 }else{
 			$replyToken = $event['replyToken'];
 			$messages = [
-				'type' => 'text',
+				
 				'text' => $event['type']
 			];
 		 }
