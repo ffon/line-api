@@ -52,20 +52,12 @@
                         
                             ?>
 
-                        
                         <label>Line@</label><br>
-                            
                            <select name="token_line_mas">
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
                                     <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php  echo $de_line_mas[$j]->line_name; ?></option>
                                 <? } ?> 
-                           </select>
-                        
-<!--                     <label>Line@</label><br>
-                            <input type="radio"  value="SayhWjVgzo6nk40VS+anrzU+guXmPffyhlYiwLkI859ODhLQNJR5Spsfm8+HFN7bQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcsTyC1EC8JMhzvS9soYMvVYsqeEWtLJWsgwb7Z7VcbMfAdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon</input>
-                            <input type="radio"  value="3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon3</input> -->
-                         <br> 
-                
+                           </select><br> 
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
                     </div>
@@ -86,7 +78,6 @@
                                         <h4 class="modal-title" id="myModalLabel">Member</h4>
                                     </div>
                                     <div class="container">
-                                         
                                         <div class="checkbox">
                                             <?php
                                                     
@@ -108,13 +99,12 @@
                                                 
                                                 ?>
                                             
-                                            <?php
-                                            
-                                            for($i=0;$i<$count;$i++){ ?>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
-                                            </div>
-                                           <?php }?>
+                                            <?php if($de_line_mas->id == $de->line_master_id){
+                                                    for($i=0;$i<$count;$i++){ ?>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
+                                                        </div>
+                                           <?php }}?>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
