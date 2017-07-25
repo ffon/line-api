@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-
+5
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -55,7 +55,7 @@
                         <label>Line@</label><br>
                            <select name="token_line_mas">
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
-                                    <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php  echo $de_line_mas[$j]->line_name; ?></option>
+                                    <option  value="<?php echo $de_line_mas[$j]->id;  ?>" > <?php  echo $de_line_mas[$j]->id; echo "   "; echo $de_line_mas[$j]->line_name; ?></option>
                                 <? } ?> 
                            </select><br> 
                         <label>Text</label>
@@ -99,12 +99,12 @@
                                                 
                                                 ?>
                                             
-                                            <?php if($de_line_mas->id == $de->line_master_id){
+                                            <?php 
                                                     for($i=0;$i<$count;$i++){ ?>
                                                         <div class="checkbox">
                                                             <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                                         </div>
-                                           <?php }}?>
+                                           <?php }?>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
