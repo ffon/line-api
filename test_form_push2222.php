@@ -102,8 +102,7 @@
                                                
                                                 
                                                 ?>
-                                            <? echo $de->line_master_id;
-                                                  echo $de_line_mas->id; ?>
+                                            
                                             
                                             <?php
 
@@ -135,7 +134,8 @@
             $('#myInput').focus()
         })
     </script>
-
+<? echo $de->line_master_id;
+   echo $de_line_mas->id; ?>
 
 </body>
 
