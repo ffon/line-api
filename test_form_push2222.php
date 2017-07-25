@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-    1
+    0
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -103,7 +103,7 @@
                                             
                                             <?php
                                             
-                                            $id_mas = $_POST['id_mas'];
+                                            $id_mas = $_GET['id_mas'];
                                             var_dump($id_mas);
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
@@ -134,12 +134,10 @@
         });
          function member_bt() {
              console.log(document.getElementById("token").value);
-             $.post("https://glacial-sea-38867.herokuapp.com/test_form_push2222.php",
+             var id_master = document.getElementById("token").value; 
+             $.get("https://glacial-sea-38867.herokuapp.com/test_form_push2222.php",
                 {
-                    id_mas:document.getElementById("token").value
-                },
-                function(data, status){
-                    alert("ok");
+                    id_mas:id_master
                 }
              );
         }
