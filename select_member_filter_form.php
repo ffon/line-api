@@ -103,7 +103,7 @@
                                             
                                             <?php 
                                                     
-                                                    for($i=0;$i<$count;$i++){ ?>
+                                                    for($i=0;$i<$count;$i++){ echo $line_id; ?>
                                                         <div class="checkbox">
                                                             <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                                         </div>
