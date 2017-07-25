@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-
+44
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -50,7 +50,7 @@
                             ?>
                         <label>Line@</label><br>
                             
-                           <select name="token_line_mas">
+                           <select id="token" name="token_line_mas">
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
                                     <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php echo $de_line_mas[$j]->id; echo $de_line_mas[$j]->line_name;  ?></option>
                                 <? } ?> 
@@ -67,7 +67,7 @@
                     
                     <!--buttonMember-->
                     <div class="form-group" align="center">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
+                        <button type="button" onclick="member_bt()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
                         MEMBER
                         </button>
                     </div>
@@ -134,6 +134,10 @@
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
         })
+         function member_bt() {
+            console.log("sssss");
+            //document.getElementById("token").value = "banana";
+        }
     </script>
 
 
