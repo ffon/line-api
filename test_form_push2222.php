@@ -103,7 +103,7 @@
                                             
                                             <?php
                                             
-                                            $id_mas = $_POST['id'];
+                                            $id_mas = $_POST['id_mas'];
                                             var_dump($id_mas);
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
@@ -136,7 +136,7 @@
              console.log(document.getElementById("token").value);
              $.post("https://glacial-sea-38867.herokuapp.com/test_form_push2222.php",
                 {
-                    id:document.getElementById("token").value
+                    id_mas:document.getElementById("token").value
                 },
                 function(data, status){
                     alert("ok");
