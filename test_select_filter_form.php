@@ -1,40 +1,32 @@
 <html>
-<h4 class="ui header">Inline</h4>
-<p>A dropdown can be formatted to appear inline in other content</p>
-<span>
-  Show me posts by
-  <div class="ui inline dropdown">
-    <div class="text">
-      <img class="ui avatar image" src="/images/avatar/small/jenny.jpg">
-      Jenny Hess
-    </div>
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/jenny.jpg">
-        Jenny Hess
-      </div>
-      <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
-        Elliot Fu
-      </div>
-      <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
-        Stevie Feliciano
-      </div>
-      <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
-        Christian
-      </div>
-      <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/matt.jpg">
-        Matt
-      </div>
-      <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/justen.jpg">
-        Justen Kitsune
-      </div>
-    </div>
-  </div>
-</span>
+<?php 
+  $chAdd = curl_init();
+  curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
+  curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+  curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+  "Content-Type: application/json",
+                          )
+  );
+  $result = curl_exec($chAdd);
+  $err    = curl_error($chAdd);
+  curl_close($chAdd);
+
+  $de_line_mas = json_decode($result);
+  $count_line_mas = count($de_line_mas);
+  
+  
+?>
+  
+  <select id='keep-order' multiple='multiple'>
+    <option value='elem_1'>elem 1</option>
+    <option value='elem_2'>elem 2</option>
+    <option value='elem_3'>elem 3</option>
+    <option value='elem_4'>elem 4</option>
+    <option value='elem_100'>elem 100</option>
+  </select>
+  
+  <script>
+    $('#keep-order').multiSelect({ keepOrder: true });
+  </script>
 <html>
