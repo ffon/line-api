@@ -52,7 +52,7 @@
                             
                            <select id="token" name="token_line_mas">
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
-                                    <option  id="<? $de_line_mas[$j]->id; ?>" value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php echo $de_line_mas[$j]->id; echo $de_line_mas[$j]->line_name;  ?></option>
+                                    <option  value="<?php echo $de_line_mas[$j]->id  ?>" > <?php echo $de_line_mas[$j]->id; echo $de_line_mas[$j]->line_name;  ?></option>
                                 <? } ?> 
                            </select>
                         
