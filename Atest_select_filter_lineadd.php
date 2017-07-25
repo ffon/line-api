@@ -25,9 +25,9 @@
       <?php $i=0; while($i!=$count_line_mas){ ?>
         <option type="text"   value="<?php echo $de_line_mas[$i]->id; ?>"> <?php echo $de_line_mas[$i]->id; echo "  "; echo $de_line_mas[i]->line_name ?></option> 
       <?php $i++; ?>
+      <input type="hidden" value="<?php echo $de_line_mas[$i]->access_token ?>" name="access_token"/>
       <?}?>
     </select>
-        <option type="hidden" value="<?php echo $de_line_mas[$i]->access_token ?>" name="access_token"/> 
     <button type="submit" name="submit">submit</button>
   </form>
 
