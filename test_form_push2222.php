@@ -76,7 +76,9 @@
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         <h4 class="modal-title" id="myModalLabel">Member</h4>
+                                       
                                        <input type="text" name"idMaster" id="id-master">
+                                       
                                     </div>
                                     <div class="container">
                                        
@@ -104,7 +106,7 @@
                                             
                                             <?php
                                             
-                                            $id_master = $_GET["id_mas"];
+                                            $id_master = $_GET["idMaster"];
                                             var_dump($id_master);
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
