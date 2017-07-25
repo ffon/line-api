@@ -5,14 +5,15 @@
     echo "token"."<br>";
     var_dump($token);
     
-    $en_token = urldecode($token);
+    $en_token = urlencode($token);
+    echo "url en"."<br>";
     echo "<br>";
     var_dump($en_token);
     
 
 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$en_token.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_URL,  urlencode('http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$token.'&add_by=1'));
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
@@ -23,7 +24,7 @@
     $err    = curl_error($chAdd);
     curl_close($chAdd);
     echo "<br>";
-    echo "url en"."<br>";
+    
 //     var_dump($url);echo "<br>";
 
     echo "result:"."<br>".$result;
