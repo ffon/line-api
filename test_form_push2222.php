@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-    0
+    3
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -56,10 +56,7 @@
                                 <? } ?> 
                            </select>
                         
-<!--                     <label>Line@</label><br>
-                            <input type="radio"  value="SayhWjVgzo6nk40VS+anrzU+guXmPffyhlYiwLkI859ODhLQNJR5Spsfm8+HFN7bQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcsTyC1EC8JMhzvS9soYMvVYsqeEWtLJWsgwb7Z7VcbMfAdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon</input>
-                            <input type="radio"  value="3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon3</input> -->
-                         <br> 
+                            <br> 
                 
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
@@ -105,8 +102,9 @@
                                             
                                             
                                             <?php
-                                            echo $de->line_master_id; echo $de_line_mas->id;
                                             
+                                            $id_mas = $_POST['id'];
+                                            var_dump($id_mas);
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
                                                 
@@ -135,7 +133,15 @@
             $('#myInput').focus()
         })
          function member_bt() {
-            console.log(document.getElementById("token").value);
+             console.log(document.getElementById("token").value);
+             $.post("https://glacial-sea-38867.herokuapp.com/test_form_push2222.php",
+                {
+                    id:document.getElementById("token").value
+                },
+                function(data, status){
+                    alert("ok");
+                });
+        }});
             
         }
     </script>
