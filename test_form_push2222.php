@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-   2
+   1
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -106,9 +106,9 @@
                                             
                                             <?php
                                             
-                                            $id_master = $_GET["id-master"];
+                                            $id_master = $_GET['idMaster'];
                                             var_dump($id_master);
-                                           echo "2222";
+                                           echo "22";
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
                                                 
