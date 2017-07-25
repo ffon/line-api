@@ -23,7 +23,7 @@
     curl_close($chAdd);
     echo "<br>";
     echo "url en"."<br>";
-    var_dump($url);
+    var_dump($url);echo "<br>";
 
     echo "result:"."<br>".$result;
     
