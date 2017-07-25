@@ -77,7 +77,7 @@
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         <h4 class="modal-title" id="myModalLabel">Member</h4>
                                        
-                                       <input type="text" name"idMaster" id="id-master">
+                                       
                                        
                                     </div>
                                     <div class="container">
@@ -103,7 +103,7 @@
                                                 
                                                 ?>
                                             
-                                            
+                                            <input type="text" name"idMaster" id="id-master">
                                             <?php
                                             
                                            $idmaster = $_GET['idMaster'];
