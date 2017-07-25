@@ -6,8 +6,8 @@
     var_dump($token);
     
     $en_token = json_encode($token);
-    echo "token en"."<br>";
-    var_dump($en_token);
+    echo "<br>";
+    
     $url = 'http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$en_token.'&add_by=1';
 
     $chAdd = curl_init();
@@ -21,6 +21,7 @@
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
+    var_dump($url);
 
     echo "result:"."<br>".$result;
     
