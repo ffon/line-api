@@ -133,6 +133,7 @@
     <script>
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
+            console.log("sssss");
             console.log(document.getElementById("token").value);
         })
         
