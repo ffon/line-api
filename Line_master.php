@@ -21,6 +21,8 @@
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
+    echo "<br>";
+    echo "url en"."<br>";
     var_dump($url);
 
     echo "result:"."<br>".$result;
