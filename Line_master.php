@@ -13,7 +13,7 @@
 
 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL,  urlencode('http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$token.'&add_by=1'));
+    curl_setopt($chAdd, CURLOPT_URL,  'http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$en_token.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
