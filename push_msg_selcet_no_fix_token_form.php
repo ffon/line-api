@@ -72,7 +72,7 @@
                     
                     <!--buttonMember-->
                     <div class="form-group" align="center">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px; id="member_id" ">
                         MEMBER
                         </button>
                     </div>
@@ -134,8 +134,8 @@
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
         })
-        $('#token').on(click(),function (){
-                   $('#token').value    
+        $('#member_id').on(click(), function (){
+                   console.log($('#token').value );
                        })
         
     </script>
