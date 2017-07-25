@@ -110,7 +110,7 @@
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
                                                
-                                                <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
+                                                <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; echo "  "; echo $de->line_master_id; echo "  "; echo $de_line_mas->id;?></label>
                                             </div>
                                            <?php }?>
                                         </div>
@@ -122,6 +122,7 @@
                                 </div>
                             </div>
                         </form>
+                     
                         
                     </div>
                 </form>
@@ -134,8 +135,7 @@
             $('#myInput').focus()
         })
     </script>
-<?php echo $de->line_master_id;
-   echo $de_line_mas->id; ?>
+
 
 </body>
 
