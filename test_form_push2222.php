@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-20
+21
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -135,8 +135,8 @@
             $('#myInput').focus()
         })
          function member_bt() {
-            console.log("sssss");
-            document.getElementById("token").value;
+            console.log(document.getElementById("token").value);
+            
         }
     </script>
 
