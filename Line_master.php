@@ -7,6 +7,7 @@
     
     $en_token = json_encode($token);
     echo "<br>";
+    var_dump($en_token);
     
 
 
