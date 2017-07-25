@@ -105,7 +105,7 @@
                                             
                                             
                                             <?php
-                                            echo $de[$i]->line_master_id; echo $de_line_mas[$i]->id;
+                                            echo $de->line_master_id; echo $de_line_mas->id;
                                             
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
