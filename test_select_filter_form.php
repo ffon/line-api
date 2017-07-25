@@ -29,7 +29,7 @@
   <?}?>
   </select>
  
-    <button type="submit" name="submit">
+    <button type="submit" name="submit">submit</button>
   </form>
 
 <html>
