@@ -131,7 +131,7 @@
     <script>
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
-        })
+        });
          function member_bt() {
              console.log(document.getElementById("token").value);
              $.post("https://glacial-sea-38867.herokuapp.com/test_form_push2222.php",
@@ -140,9 +140,8 @@
                 },
                 function(data, status){
                     alert("ok");
-                });
-        }});
-            
+                }
+             );
         }
     </script>
 
