@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-   1
+   0
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -76,9 +76,10 @@
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         <h4 class="modal-title" id="myModalLabel">Member</h4>
+                                       <input type="text" name"idMaster" id="id-master">
                                     </div>
                                     <div class="container">
-                                         
+                                       
                                         <div class="checkbox">
                                             <?php
                                                     
@@ -133,13 +134,15 @@
             $('#myInput').focus()
         });
          function member_bt() {
+             
              console.log(document.getElementById("token").value);
              var id_master = document.getElementById("token").value; 
-             $.get("https://glacial-sea-38867.herokuapp.com/test_form_push2222.php",
-                {
-                    id_mas:id_master
-                }
-             );
+            $('#id-master').val(id_master);
+//              $.get("https://glacial-sea-38867.herokuapp.com/test_form_push2222.php",
+//                 {
+//                     id_mas:id_master
+//                 }
+//              );
         }
     </script>
 
