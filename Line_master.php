@@ -5,7 +5,7 @@
     echo "token"."<br>";
     var_dump($token);
     
-    $en_token = json_encode($token);
+    $en_token = urldecode($token);
     echo "<br>";
     var_dump($en_token);
     
