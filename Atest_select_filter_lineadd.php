@@ -20,16 +20,18 @@
 ?>
   <form action="Atest_select_member_filter.php" method="GET">  
   
-  <select>
-    <option value="">Choose line@</option>
-    <?php $i=0; while($i!=$count_line_mas){ ?>
-      <option type="text"   value="<?php echo $de_line_mas[$i]->id; ?>" name="id_line_master"> <?php echo $de_line_mas[$i]->id; echo "  "; echo $de_line_mas[i]->line_name ?></option> 
-      <option type="hidden" value="<?php echo $de_line_mas[$i]->access_token ?>" name="access_token">
-    <?php $i++; ?>
-  <?}?>
-  </select>
- 
+    <select  name="id_line_master">
+      <option value="">Choose line@</option>
+      <?php $i=0; while($i!=$count_line_mas){ ?>
+        <option type="text"   value="<?php echo $de_line_mas[$i]->id; ?>"> <?php echo $de_line_mas[$i]->id; echo "  "; echo $de_line_mas[i]->line_name ?></option> 
+      <?php $i++; ?>
+      
+    </select>
+  
+    <option type="hidden" value="<?php echo $de_line_mas[$i]->access_token ?>" name="access_token"/>
+    <?}?>
     <button type="submit" name="submit">submit</button>
   </form>
+
 
 <html>
