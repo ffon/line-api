@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-11
+0
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -101,8 +101,8 @@
                                                 ?>
                                             
                                             <?php 
-                                                    if($line_id == $de->line_master_id){
-                                                    for($i=0;$i<$count;$i++){ ?>
+                                                    for($i=0;$i<$count;$i++){ 
+                                                        if($line_id == $de->line_master_id){ ?>
                                                         <div class="checkbox">
                                                             <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                                         </div>
