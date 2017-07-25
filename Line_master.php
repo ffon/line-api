@@ -8,10 +8,10 @@
     $en_token = json_encode($token);
     echo "<br>";
     
-    $url = 'http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$en_token.'&add_by=1';
+
 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, urlencode($url));
+    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_master?line_name='.$name.'&access_token='.$en_token.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
@@ -23,7 +23,7 @@
     curl_close($chAdd);
     echo "<br>";
     echo "url en"."<br>";
-    var_dump($url);echo "<br>";
+//     var_dump($url);echo "<br>";
 
     echo "result:"."<br>".$result;
     
