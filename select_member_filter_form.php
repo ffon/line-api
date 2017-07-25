@@ -59,8 +59,7 @@
                                     <option type="hidden" value="<?php echo $de_line_mas[$j]->access_token;  ?>" >
                                <? } ?> 
                            </select><br> 
-<!--                         <? for($j=0;$j<$count_line_mas;$j++){
-                            echo $line_id} ?> -->
+
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
                     </div>
@@ -104,7 +103,7 @@
                                             
                                             <?php 
                                                     
-                                                    for($i=0;$i<$count;$i++){ echo $line_id;?>
+                                                    for($i=0;$i<$count;$i++){ ?>
                                                         <div class="checkbox">
                                                             <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                                         </div>
