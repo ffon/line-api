@@ -106,9 +106,9 @@
                                             
                                             <?php
                                             
-                                            $id_master = $_GET['idMaster'];
-                                            var_dump($id_master);
-                                           echo "22";
+                                           $idmaster = $_GET['idMaster'];
+                                           var_dump($idmaster);
+                                           echo "2";
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
                                                 
