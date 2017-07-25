@@ -59,7 +59,7 @@
                                     <option type="hidden" value="<?php echo $de_line_mas[$j]->access_token;  ?>" >
                                <? } ?> 
                            </select><br> 
-                        <? echo $line_id ?>
+                        <? for($j=0;$j<$count_line_mas;$j++){echo $line_id} ?>
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
                     </div>
