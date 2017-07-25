@@ -133,10 +133,10 @@
     <script>
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
+            console.log(document.getElementById("token").value);
         })
-        $('#member_id').on(click(), function (){
-                   console.log($('#token').value );
-                       })
+        
+        
         
     </script>
     
