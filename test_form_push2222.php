@@ -103,8 +103,8 @@
                                             
                                             <?php
                                             
-                                            $id_mas = $_GET['id_mas'];
-                                            var_dump($id_mas);
+                                            $id_master = $_GET["id_mas"];
+                                            var_dump($id_master);
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
                                                 
