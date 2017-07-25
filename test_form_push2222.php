@@ -104,11 +104,12 @@
                                                 ?>
                                             
                                             <?php
-                                            echo $de->line_master_id;
-                                            echo $de_line_mas->id;
+
                                             
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
+                                                echo $de->line_master_id;
+                                                echo $de_line_mas->id;
                                                 <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                             </div>
                                            <?php }?>
