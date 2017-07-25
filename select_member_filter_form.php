@@ -54,7 +54,7 @@
 
                         <label>Line@</label><br>
                            
-                           <select name="token_line_mas">
+                           <select class="ui dropdown" name="token_line_mas">
                            <option type="text" value=" " >Line@</option>
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
                                     <option type="text" value="<?php $line_id=$de_line_mas[$j]->id; echo $line_id;  ?>" > <?php  echo $de_line_mas[$j]->id; echo "  "; echo $de_line_mas[$j]->line_name; ?></option>
