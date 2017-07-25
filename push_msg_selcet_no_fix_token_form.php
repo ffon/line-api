@@ -72,7 +72,7 @@
                     
                     <!--buttonMember-->
                     <div class="form-group" align="center">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px; id="member_id" ">
+                        <button type="button" onclick="member_bt()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px; id="member_id" ">
                         MEMBER
                         </button>
                     </div>
@@ -136,6 +136,10 @@
             console.log("sssss");
             console.log(document.getElementById("token").value);
         })
+        function member_bt() {
+            console.log("sssss");
+            //document.getElementById("token").value = "banana";
+        }
         
         
         
