@@ -55,7 +55,7 @@
                         <label>Line@</label><br>
                            <select name="token_line_mas">
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
-                                    <option  value="<?php $line_id = $de_line_mas[$j]->id; echo $line_id;  ?>" > <?php  echo $de_line_mas[$j]->id; echo "   "; echo $de_line_mas[$j]->line_name;  ?></option>
+                                    <option  value="<?php $line_id=$de_line_mas[$j]->id; echo $line_id;  ?>" > <?php  echo $de_line_mas[$j]->id; echo "  "; echo $de_line_mas[$j]->line_name; echo $line_id;  ?></option>
                                     <option type="hidden" value="<?php echo $de_line_mas[$j]->access_token;  ?>" >
                                <? } ?> 
                            </select><br> 
