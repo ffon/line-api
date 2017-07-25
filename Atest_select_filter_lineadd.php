@@ -18,7 +18,7 @@
   
   
 ?>
-  <form action="test_select_member_filter.php" method="GET">  
+  <form action="Atest_select_member_filter.php" method="GET">  
   
   <select  name="id_line_master">
     <option value="">Choose line@</option>
