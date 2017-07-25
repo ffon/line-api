@@ -136,7 +136,7 @@
         })
          function member_bt() {
             console.log("sssss");
-            //document.getElementById("token").value = "banana";
+            document.getElementById("token").value;
         }
     </script>
 
