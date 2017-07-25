@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
-
+44
 <head>
-    44
     <title>Push Messages</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +25,7 @@
     </style>
 </head>
 <body>
+    
     <div class="container">
         <div class="row">
             <div class="col-xs-12 head-form">
