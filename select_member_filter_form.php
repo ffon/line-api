@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-5
+7
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -55,8 +55,8 @@
                         <label>Line@</label><br>
                            <select name="token_line_mas">
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
-                                    <option  value="<?php $line_id = $de_line_mas[$j]->id; echo $line_id;  ?>" > <?php  echo $de_line_mas[$j]->id; echo "   "; echo $de_line_mas[$j]->line_name; ?></option>
-                                    <option type="hidden" value="<?php echo $de_line_mas[$j]->id;  ?>" >
+                                    <option  value="<?php $line_id = $de_line_mas[$j]->id; echo $line_id;  ?>" > <?php  echo $de_line_mas[$j]->id; echo "   "; echo $de_line_mas[$j]->line_name;  ?></option>
+                                    <option type="hidden" value="<?php echo $de_line_mas[$j]->access_token;  ?>" >
                                <? } ?> 
                            </select><br> 
                         <label>Text</label>
