@@ -52,7 +52,7 @@
                             
                            <select name="token_line_mas">
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
-                                    <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php  echo $de_line_mas[$j]->line_name; ?></option>
+                                    <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php echo $de_line_mas[$j]->id; echo $de_line_mas[$j]->line_name;  ?></option>
                                 <? } ?> 
                            </select>
                         
@@ -110,7 +110,7 @@
                                             for($i=0;$i<$count;$i++){ ?>
                                             <div class="checkbox">
                                                
-                                                <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; echo "  "; echo $de[$i]->line_master_id; echo "  "; echo $de_line_mas[$i]->id;?></label>
+                                                <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; echo ":   "; echo $de[$i]->line_master_id;?></label>
                                             </div>
                                            <?php }?>
                                         </div>
