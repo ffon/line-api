@@ -52,7 +52,7 @@
                             
                            <select id="token" name="token_line_mas">
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
-                                    <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php echo $de_line_mas[$j]->id; echo $de_line_mas[$j]->line_name;  ?></option>
+                                    <option  id="<? $de_line_mas[$j]->id; ?>" value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php echo $de_line_mas[$j]->id; echo $de_line_mas[$j]->line_name;  ?></option>
                                 <? } ?> 
                            </select>
                         
@@ -135,7 +135,7 @@
             $('#myInput').focus()
         })
          function member_bt() {
-            console.log(document.getElementById("token").value);
+            console.log(document.getElementById("token").id);
             
         }
     </script>
