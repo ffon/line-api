@@ -3,17 +3,23 @@
 // $text = $_GET['textArea'];
 // $midUser = $_GET['mid']; 
 
-$strAccessToken = '3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=';
-$midUser = 'U7de80d0a2ceea863e831375badd2eb55'; 
-$text = '123';
+// $strAccessToken = '3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=';
+// $midUser = 'U7de80d0a2ceea863e831375badd2eb55'; 
+// $text = '123';
 
-echo "text"."<br>";
-var_dump($text);echo "<br>";
+$token = $_GET['access_token'];
+$text =  $_GET['textArea'];
+$midUser = $_GET['mid']; 
+$strAccessToken = $token;
+
+echo 'token';echo "<br>";
+var_dump($token);echo "<br>";
+echo 'strAccessTokens' ;echo "<br>";
+var_dump($strAccessTokens);echo "<br>";
+echo 'strAccessToken';echo "<br>";
+var_dump($strAccessToken);echo "<br>";
 echo "Mid User ";echo "<br>";
 var_dump($midUser);echo "<br>";
-echo "access_token";echo "<br>";
-var_dump($strAccessToken);echo "<br>";
-
 
 foreach($midUser as $key => $mid){        
         $messages = [
@@ -40,7 +46,8 @@ foreach($midUser as $key => $mid){
         $result = curl_exec($ch);
         curl_close($ch);
 }
-
+echo "result ";echo "<br>";
 var_dump($result);
-
-?>
+ 
+ 
+ ?>
