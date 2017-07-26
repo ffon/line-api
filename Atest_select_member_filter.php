@@ -4,7 +4,7 @@
     $access_token = $_GET['access_token'];
 
     var_dump($line_id);
-    var_dump($access_token);
+   // var_dump($access_token);
 
 
   $chAdd = curl_init();
@@ -23,7 +23,8 @@
 
 
 ?>
-    <form action="A_push_msg.php" method="GET">  
+    <form action="A_push_msg.php" method="GET">
+        <?php echo $line_id; ?>
     <select name="mid">
       <option value="">Choose line member</option>
       <?php $i=0; 
