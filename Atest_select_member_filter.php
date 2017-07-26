@@ -20,13 +20,13 @@
     $err    = curl_error($chAdd);
     curl_close($chAdd);
     $de_line_member= json_decode($result);
-    $count_line_member = count($de_line_mas);
+    $count_line_member = count($de_line_member);
     
     echo "ID line ".$line_id; 
     var_dump($count_line_member);
     
     for($i=0;$i<$count_line_member;$i++){
-        echo $line_id;
+        echo $de_line_member[$i]->id;
      }
 //     echo  "de_line_member"."<br>";
 //     var_dump($de_line_member);
