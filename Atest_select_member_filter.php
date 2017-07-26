@@ -1,5 +1,5 @@
 <html>
-    5
+    1
 <?php 
     $line_id = $_GET['id_line_master'];
     //     $access_token = $_GET['access_token'];
@@ -28,8 +28,21 @@
     for($i=0;$i<$count_line_member;$i++){
         if($de_line_member[$i]->line_master_id==$line_id){
         echo $de_line_member[$i]->member_name;echo "<br>";
+        }else{
+            break;
         }
      }
+    
+     <form action="A_push_msg.php" method="GET">
+    <select name="mid">
+    <option>Choose line member</option>
+    <?php $j=0;
+    while($j!=$count_line_member){
+    if($de_line_member[$j]->line_master_id == $line_id)?>
+    <option value="<?php echo $de_line_member[$j]->user_id; ?>"><?php echo $de_line_member[$j]->member_name ?></option>
+    <?}?>
+    </select>
+    </form>
 
     
 
