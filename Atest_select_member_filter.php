@@ -25,13 +25,6 @@
     echo "ID line ".$line_id; echo "<br>";
     var_dump($count_line_member);
     echo "<br>";
-//     for($i=0;$i<$count_line_member;$i++){
-//         if($de_line_member[$i]->line_master_id==$line_id){
-//         echo $de_line_member[$i]->member_name;echo "<br>";
-//         }else{
-//             break;
-//         }
-//      }
 
 ?>
       
@@ -48,8 +41,11 @@
             $j++;
         }
         ?>
-        
-    </select>  
+    </select>
+        <div>
+            <label>Text</label>
+            <textarea name="textArea">input msg</textarea>
+        </div>            
     <button type="submit" name="submit">submit</button>
   </form>
 
