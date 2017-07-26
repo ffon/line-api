@@ -1,5 +1,5 @@
 <html>
-    1
+    2
 <?php 
     $line_id = $_GET['id_line_master'];
     //     $access_token = $_GET['access_token'];
@@ -40,11 +40,17 @@
         <option>Choose line member</option>
         <?php $j=0;
             while($j!=$count_line_member){
-            if($de_line_member[$j]->line_master_id == $line_id)?>
-            <option value="<?php echo $de_line_member[$j]->user_id; ?>"><?php echo $de_line_member[$j]->member_name ?></option>
-        <?}?>
-    </select>
-         <input type="submit" name="submit" />
-    </form>
+            if($de_line_member[$j]->line_master_id == $line_id){?>
+            <option value="<?php echo $de_line_member[$j]->user_id; ?>"><?php echo $de_line_member[$j]->member_name; ?></option>
+        <?}else{
+            break;
+            }
+            $j++;
+        }
+        ?>
+        
+    </select>  
+    <button type="submit" name="submit">submit</button>
+  </form>
 
 </html>
