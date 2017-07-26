@@ -24,7 +24,7 @@
     echo "ID line: ".$line_id; 
     $i=0; 
     while($i!=$count_line_member){
-    echo  $de_line_member[$i]->id;
+    echo  $de_line_member[$i]->line_master_id;
     $i++;
     }
 
