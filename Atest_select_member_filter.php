@@ -25,7 +25,7 @@
     echo "ID line ".$line_id; 
      $i=0; 
      while($i!=$count_line_member){
-             echo  $de_line_member;
+             echo  $de_line_member[$i];
      $i++;
      }
 
