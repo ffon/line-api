@@ -1,5 +1,5 @@
 <html>
-  5
+  4
 <?php 
   $chAdd = curl_init();
     curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
@@ -25,8 +25,9 @@
             <?
             $i++;
             }?>
-            <?php echo $de_line_mas[$lineId]->access_token; ?>
+            
     </select>
+  <?php echo $de_line_mas[$lineId]->access_token; ?>
   <button type="submit" name="submit">submit</button>
 </form>
 
