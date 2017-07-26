@@ -21,8 +21,10 @@
         if($de_line_mas[$i]->id == $line_id){
               $token=$de_line_mas[$i]->access_token;
         }
+        $i++;
         echo $de_line_mas->line_name;
         echo $token;
+      
     }
 
     
