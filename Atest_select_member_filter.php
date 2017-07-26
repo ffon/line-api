@@ -1,4 +1,5 @@
 <html>
+    5
 <?php 
     $line_id = $_GET['id_line_master'];
     //     $access_token = $_GET['access_token'];
@@ -21,12 +22,12 @@
     $de_line_member= json_decode($result);
     $count_line_member = count($de_line_mas);
     
-    echo "ID line: ".$line_id; 
-    $i=0; 
-    while($i!=$count_line_member){
-    echo  $de_line_member[$i]->line_master_id;
-    $i++;
-    }
+    echo "ID line ".$line_id; echo  $de_line_member->line_master_id;
+//     $i=0; 
+//     while($i!=$count_line_member){
+    
+//     $i++;
+//     }
 
 ?>
     
