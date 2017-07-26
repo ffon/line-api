@@ -1,5 +1,5 @@
 <html>
-  0
+  1
 <?php 
   $chAdd = curl_init();
   curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
@@ -17,7 +17,7 @@
 
 ?>
     <form action="Atest_select_member_filter.php" method="GET">  
-    <select  name="id_line_master">
+    <select  multiple="multiple" name="id_line_master">
       <option value="">Choose line@</option>
       <?php $i=0; while($i!=$count_line_mas){ ?>
         <option type="text"  value="<?php $id_line=$de_line_mas[$i]->id; echo $id_line;  ?>"> <?php echo $id_line; echo " "; echo $de_line_mas[$i]->line_name ?></option> 
