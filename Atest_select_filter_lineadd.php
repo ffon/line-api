@@ -27,7 +27,7 @@
         <option type="text"  value="<?php $id_line=$de_line_mas[$i]->id; echo $id_line;  ?>"> <?php echo $id_line; echo " "; echo $de_line_mas[$i]->line_name ?></option> 
       <?
       $i++;
-      echo $de_line_mas[$id_line]->access_token;
+     // echo $de_line_mas[$id_line]->access_token;
       }?>
     </select>
     
