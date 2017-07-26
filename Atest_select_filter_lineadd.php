@@ -24,12 +24,10 @@
     <select  name="id_line_master">
       <option value="">Choose line@</option>
       <?php $i=0; while($i!=$count_line_mas){ ?>
-        <option type="text"  value="<?php $id_line=$de_line_mas[$i]->id; echo $id_line;  ?>"> <?php echo $de_line_mas[$i]->line_name ?></option> 
+        <option type="text"  value="<?php $id_line=$de_line_mas[$i]->id; echo $id_line;  ?>"> <?php echo $id_line; echo " "; echo $de_line_mas[$i]->line_name ?></option> 
           
 <!--         <input type="hidden" value="<?php //echo $de_line_mas[$id_line]->access_token ?>" name="access_token" /> -->
       <?php $i++; ?>
-      
-      <?php echo "id_line ".$id_line; ?>
       <?}?>
     </select>
     
