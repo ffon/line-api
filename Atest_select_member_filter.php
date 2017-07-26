@@ -47,7 +47,7 @@
             <label>Text</label>
             <textarea name="textArea">input msg</textarea>
         </div>
-            <input type="text" value="<?php echo $access_token; ?>" name="access_token"/>
+            <input type="hidden" value="<?php echo $access_token; ?>" name="access_token"/>
     <button type="submit" name="submit">submit</button>
   </form>
 
