@@ -37,6 +37,7 @@
             if($de_line_member[$j]->line_master_id == $line_id){?>
             <option value="<?php echo $de_line_member[$j]->user_id; ?>"><?php echo $de_line_member[$j]->member_name; ?></option>
         <?}else{
+            echo "not have member in line@";
             break;
             }
             $j++;
