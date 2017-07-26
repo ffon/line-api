@@ -30,7 +30,7 @@
 ?>
       
     <form action="A_push_msg.php" method="GET">
-<!--     <select name="mid[]"> -->
+    <select name="mid[]">
         <input>Choose line member>
         <?php $j=0;
             while($j!=$count_line_member){
@@ -43,7 +43,7 @@
             $j++;
         }
         ?>
-<!--     </select> -->
+    </select>
         <div>
             <label>Text</label>
             <textarea name="textArea">input msg</textarea>
