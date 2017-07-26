@@ -5,7 +5,7 @@
   curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
   curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
   curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+  curl_setopt($chAdd, CURLOPT_HTTPHEADER, araray(
   "Content-Type: application/json",
                           )
   );
@@ -25,11 +25,9 @@
       <option value="">Choose line@</option>
       <?php $i=0; while($i!=$count_line_mas){ ?>
         <option type="text"  value="<?php $id_line=$de_line_mas[$i]->id; echo $id_line;  ?>"> <?php echo $id_line; echo " "; echo $de_line_mas[$i]->line_name ?></option> 
-          <?php if($id_line==$de_line_mas[$i]->id){?> 
-         <input type="hidden" value="<?php echo $de_line_mas[$id_line]->access_token ?>" name="access_token" /> 
-      
-      <?}
+      <?
       $i++;
+      echo $de_line_mas[$id_line]->access_token;
       }?>
     </select>
     
