@@ -31,7 +31,7 @@
       
     <form action="A_push_msg.php" method="GET">
     <select name="mid[]">
-        <input>Choose line member>
+        <option>Choose line member</option>
         <?php $j=0;
             while($j!=$count_line_member){
             if($de_line_member[$j]->line_master_id == $line_id){?>
