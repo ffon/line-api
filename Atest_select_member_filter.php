@@ -28,6 +28,7 @@
      $i=0; 
         while($i!=$count_line_member){
             echo $de_line_mas[$i]->id;
+            $i++;
       }
         
      ?>
