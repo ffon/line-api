@@ -1,5 +1,5 @@
 <html>
-    1
+    0
 <?php 
     $line_id = $_GET['line_id'];
     $access_token = $_GET['access_token'];
