@@ -1,5 +1,5 @@
 <html>
-    1
+    2
 <?php 
     $line_id = $_GET['line_id'];
     $access_token = $_GET['access_token'];
@@ -35,7 +35,7 @@
         <?php $j=0;
             while($j!=$count_line_member){
             if($de_line_member[$j]->line_master_id == $line_id){?>
-            <option type="checkbox" value="<?php echo $de_line_member[$j]->user_id; ?>"><?php echo $de_line_member[$j]->member_name; ?></option>
+            <option value="<?php echo $de_line_member[$j]->user_id; ?>"><?php echo $de_line_member[$j]->member_name; ?></option>
         <?}else{
             echo "not have member in line@";
             break;
