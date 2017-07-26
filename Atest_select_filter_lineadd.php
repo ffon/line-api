@@ -15,9 +15,18 @@
   $de_line_mas = json_decode($result);
   $count_line_mas = count($de_line_mas);
 
-  
-  
 ?>
-  
+    <form action="Atest_select_member_filter.php" method="GET">  
+    <select  name="id_line_master">
+      <option value="">Choose line@</option>
+      <?php $i=0; while($i!=$count_line_mas){ ?>
+        <option type="text"  value="<?php $id_line=$de_line_mas[$i]->id; echo $id_line;  ?>"> <?php echo $id_line; echo " "; echo $de_line_mas[$i]->line_name ?></option> 
+      <?
+      $i++;
+      echo $de_line_mas[$id_line]->access_token;
+      }?>
+    </select>
+    <button type="submit" name="submit">submit</button>
+  </form>
 
 <html>
