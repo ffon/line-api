@@ -1,5 +1,5 @@
 <html>
-  1
+  2<br>
 <?php 
     $line_id = $_GET['line_id'];
     var_dump($line_id);
@@ -29,9 +29,9 @@
 ?>
  
 <form action="Atest_select_member_filter.php" method="GET">
-<input type="hidden" value="<?php echo $line_id;?>" name="line_id"  />
-<input type="hidden" value="<?php echo $token;?>" name="access_token"  />
-<botton type="submit" name="submit">submit</botton>
+  <input type="hidden" value="<?php echo $line_id;?>" name="line_id"/>
+  <input type="hidden" value="<?php echo $token;?>" name="access_token"/>
+  <button type="submit" name="submit">submit</button>
 </form>
 
 
