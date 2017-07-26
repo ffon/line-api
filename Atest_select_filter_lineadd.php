@@ -1,5 +1,5 @@
 <html>
-  3
+  1
 <?php 
   $chAdd = curl_init();
   curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
