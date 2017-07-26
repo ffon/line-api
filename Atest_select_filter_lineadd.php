@@ -7,7 +7,7 @@
   curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($chAdd, CURLOPT_HTTPHEADER, araray(
   "Content-Type: application/json",
-                          ),
+                          )
   );
   $result = curl_exec($chAdd);
   $err    = curl_error($chAdd);
