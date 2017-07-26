@@ -24,16 +24,14 @@
 
 ?>
     <form action="A_push_msg.php" method="GET">
-    <?php echo "ID -line".$line_id; ?>
-    <select name="mid">
-      <option value="">Choose line member</option>
-      <?php $i=0; 
+    <?php echo "ID line: ".$line_id; 
+     $i=0; 
         while($i!=$count_line_member){
             echo $de_line_mas[$i]->id;
-
-      }?>
-    </select>
-    <button type="submit" name="submit">submit</button>
+      }
+        
+     ?>
+<!--     <button type="submit" name="submit">submit</button> -->
   </form>
 
 </html>
