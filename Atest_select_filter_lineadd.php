@@ -16,7 +16,7 @@
     $count_line_mas = count($de_line_mas);
 ?>
 
-<form action="Atest_select_member_filter.php" method="GET">
+<form action="Atest_accesstoken.php" method="GET">
     <select name="line_id">
         <option value="">line@</option>
         <?php $i=0;
