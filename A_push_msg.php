@@ -1,5 +1,5 @@
 <?php
-$token = $_GET['token_line_mas'];
+$token = $_GET['access_token'];
 $text = $_GET['textArea'];
 $midUser = $_GET['mid'];
 
