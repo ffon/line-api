@@ -1,7 +1,7 @@
 <html>
     2
 <?php 
-    $line_id = $_GET['id_line_master'];
+    $line_id = $_GET['line_id'];
     $access_token = $_GET['access_token'];
     echo "line_id"."<br>";
     var_dump($line_id);
