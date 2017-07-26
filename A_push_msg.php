@@ -1,16 +1,14 @@
 <?php
-$token = $_GET['access_token'];
+$strAccessToken = $_GET['access_token'];
 $text = $_GET['textArea'];
-$midUser = $_GET['mid'];
+$midUser = $_GET['mid']; 
 
-$strAccessToken = $token;
-
-echo 'token';echo "<br>";
-var_dump($token);echo "<br>";
-echo 'strAccessToken';echo "<br>";
-var_dump($strAccessToken);echo "<br>";
+echo "text"."<br>";
+var_dump($text);echo "<br>";
 echo "Mid User ";echo "<br>";
 var_dump($midUser);echo "<br>";
+echo "access_token";echo "<br>";
+var_dump($strAccessToken);echo "<br>";
 
 
 foreach($midUser as $key => $mid){        
@@ -38,7 +36,7 @@ foreach($midUser as $key => $mid){
         $result = curl_exec($ch);
         curl_close($ch);
 }
-echo "result ";echo "<br>";
+
 var_dump($result);
 
 ?>
