@@ -24,18 +24,13 @@
 
 ?>
     <form action="A_push_msg.php" method="GET">
-        <?php echo $line_id; ?>
+    <?php echo "ID -line".$line_id; ?>
     <select name="mid">
       <option value="">Choose line member</option>
       <?php $i=0; 
         while($i!=$count_line_member){
-        if($line_id == $de_line_mas[$i]->id){ ?>
-        <option type="text"  value="<?php echo $de_line_member[$i]->user_id; ?>"> <?php echo $de_line_mas[$i]->member_name ?></option> 
-        <input type="hidden" value="<?php echo $access_token ?>" name="access_token"/>
-      <?php $i++; ?>
-      <?}else{
-          break;
-        }
+            echo $de_line_mas[$i]->id;
+
       }?>
     </select>
     <button type="submit" name="submit">submit</button>
