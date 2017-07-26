@@ -22,16 +22,15 @@
     $de_line_member= json_decode($result);
     $count_line_member = count($de_line_member);
     
-    echo "ID line ".$line_id; 
+    echo "ID line ".$line_id; echo "<br>";
     var_dump($count_line_member);
-    
+    echo "<br>";
     for($i=0;$i<$count_line_member;$i++){
-        echo $de_line_member[$i]->id;
+        if($de_line_member[$i]->line_master_id==$line_id){
+        echo $de_line_member[$i]->member_name;echo "<br>";
+        }
      }
-//     echo  "de_line_member"."<br>";
-//     var_dump($de_line_member);
-//     echo  "result"."<br>";
-//     var_dump($result);
+
     
 
 ?>
