@@ -2,10 +2,11 @@
     2
 <?php 
     $line_id = $_GET['id_line_master'];
-    //     $access_token = $_GET['access_token'];
-
+    $access_token = $_GET['access_token'];
+    echo "line_id"."<br>";
     var_dump($line_id);
-    // var_dump($access_token);
+    echo "access_token"."<br>";
+    var_dump($access_token);
 
 
     $chAdd = curl_init();
@@ -45,7 +46,8 @@
         <div>
             <label>Text</label>
             <textarea name="textArea">input msg</textarea>
-        </div>            
+        </div>
+            <input type="text" value="<?php echo $access_token; ?>" name="access_token"/>
     <button type="submit" name="submit">submit</button>
   </form>
 
