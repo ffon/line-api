@@ -1,5 +1,5 @@
 <html>
-    4
+    1
 <?php 
     $line_id = $_GET['id_line_master'];
     //     $access_token = $_GET['access_token'];
@@ -28,6 +28,11 @@
              echo  $de_line_member[$i];
      $i++;
      }
+    echo  "de_line_member"."<br>";
+    var_dump($de_line_member);
+    echo  "result"."<br>";
+    var_dump($result);
+    
 
 ?>
     
