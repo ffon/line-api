@@ -1,5 +1,5 @@
 <html>
-    1
+    66
 <?php 
     $line_id = $_GET['id_line_master'];
     //     $access_token = $_GET['access_token'];
@@ -25,13 +25,13 @@
     echo "ID line ".$line_id; 
      $i=0; 
      while($i!=$count_line_member){
-             echo  $de_line_member[$i];
+             echo  $de_line_member[$i]->id;
      $i++;
      }
-    echo  "de_line_member"."<br>";
-    var_dump($de_line_member);
-    echo  "result"."<br>";
-    var_dump($result);
+//     echo  "de_line_member"."<br>";
+//     var_dump($de_line_member);
+//     echo  "result"."<br>";
+//     var_dump($result);
     
 
 ?>
