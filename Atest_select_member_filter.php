@@ -35,7 +35,10 @@
         <?php $j=0;
             while($j!=$count_line_member){
             if($de_line_member[$j]->line_master_id == $line_id){?>
-            <option type="checkbox" value="<?php echo $de_line_member[$j]->user_id; ?>"><?php echo $de_line_member[$j]->member_name; ?></option>
+<!--             <option type="checkbox" value="<?php echo //$de_line_member[$j]->user_id; ?>"><?php //echo $de_line_member[$j]->member_name; ?></option> -->
+            <div class="checkbox">
+             <label><input type="checkbox" value="<?php echo $de_line_member[$i]->user_id; ?>" ><?php echo $de_line_member[$i]->member_name; echo "  "; echo $de_line_member[$i]->user_id; ?></label>
+            </div>
         <?}else{
             echo "not have member in line@";
             break;
