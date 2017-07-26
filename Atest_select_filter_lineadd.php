@@ -1,5 +1,5 @@
 <html>
-  1
+  2
 <?php 
   $chAdd = curl_init();
   curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
@@ -11,16 +11,15 @@
   $result = curl_exec($chAdd);
   $err    = curl_error($chAdd);
   curl_close($chAdd);
-
   $de_line_mas = json_decode($result);
   $count_line_mas = count($de_line_mas);
-
 ?>
   <form action="Atest_select_member_filter.php" method="GET">  
     <select  name="line_id">
       <option value="">Choose line@</option>
-      <?php $i=0; while($i!=$count_line_mas){ ?>
-        <option type="text"  value="<?php $id_line=$de_line_mas[$i]->id; echo $id_line;  ?>"> <?php echo $id_line; echo " "; echo $de_line_mas[$i]->line_name ?></option> 
+      <?php $i=0; 
+      while($i!=$count_line_mas){ ?>
+        <option type="checkbox"  value="<?php $id_line=$de_line_mas[$i]->id; echo $id_line;  ?>"> <?php echo $id_line; echo " "; echo $de_line_mas[$i]->line_name ?></option> 
       <?
       $i++;
       echo $de_line_mas[$id_line]->access_token;
