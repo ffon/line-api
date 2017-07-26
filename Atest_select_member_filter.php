@@ -23,10 +23,10 @@
     $count_line_member = count($de_line_mas);
     
     echo "ID line ".$line_id; 
-     $i=0; 
-     while($i!=$count_line_member){
+     
+     for($i=0;$i<$count_line_member;$i++){
              echo  $de_line_member[$i]->id;
-     $i++;
+     
      }
 //     echo  "de_line_member"."<br>";
 //     var_dump($de_line_member);
