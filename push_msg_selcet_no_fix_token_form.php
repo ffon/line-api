@@ -37,7 +37,7 @@
                     <div class="form-group">
                           <?php
                             $chAdd = curl_init();
-                            curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_master');
+                            curl_setopt($chAdd, CURLOPT_URL, 'url');
                             curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
                             curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
@@ -62,10 +62,7 @@
                                 <? } ?> 
                            </select>
                         
-<!--                     <label>Line@</label><br>
-                            <input type="radio"  value="SayhWjVgzo6nk40VS+anrzU+guXmPffyhlYiwLkI859ODhLQNJR5Spsfm8+HFN7bQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcsTyC1EC8JMhzvS9soYMvVYsqeEWtLJWsgwb7Z7VcbMfAdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon</input>
-                            <input type="radio"  value="3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=" name="token_line_mas"> Line@ffon3</input> -->
-                         <br> 
+<br> 
                 
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
@@ -92,7 +89,7 @@
                                             <?php
                                                     
                                                 $chAdd = curl_init();
-                                                curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
+                                                curl_setopt($chAdd, CURLOPT_URL, 'url');
                                                 curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
                                                 curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
                                                 curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(

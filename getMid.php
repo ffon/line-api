@@ -4,8 +4,7 @@
     echo $mid;
     echo "<br>";
     
-    $strAccessToken = "3Wv1vcrB1uJCUf4D+nqgA8mcjtSTPYCbe5ZpR4LgyoMKb764ZewaWwAtn3kqRZLFcFvVkJH2cMox8g/ml2Ulw7YGORdDhgVXJvKZs24dnQoqaMfbpRNftFepCpuS+Hw/TdH7gkctEgiYIj4ot5A3hQdB04t89/1O/w1cDnyilFU=";
-    
+    $strAccessToken = "Token";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     

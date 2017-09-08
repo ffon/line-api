@@ -3,7 +3,7 @@
 
     <?php
         $chAdd = curl_init();
-        curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
+        curl_setopt($chAdd, CURLOPT_URL, 'url');
         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
         curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
